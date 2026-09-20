@@ -4,18 +4,19 @@ No experiments or evaluation runs have been completed yet.
 
 ## Method
 
-Record environment, commit, event sources, labeled scenarios, repetitions,
+Record environment, commit, synthetic roster screenshots, expected names, repetitions,
 configuration, and reproduction commands for each evaluation.
 
 ## Measurements
 
-Report true/false positives and false negatives, precision, recall, normal-use
-false alerts, detection latency, and CPU/memory/storage use. Explain undefined
-metrics and sample-size limitations. Link raw evidence in the repository.
+Report correctly extracted names against the expected roster before correction,
+manual corrections needed, distinct forms created, correct name-to-link matches,
+total runtime, and duplicate forms after retry. Verify template preservation,
+responder access, and independent responses. Link sanitized evidence.
 
 | Run | Date | Commit | Scenario | Expected | Observed | Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
 
 ## Limitations
 
-Document unsupported scenarios, missed detections, and known sources of noise.
+Document unsupported image layouts, OCR errors, account restrictions, and failures.
