@@ -16,6 +16,11 @@ last week as its due date.
 
 ## Schedule Changes
 
+M1 status as of 2026-09-20: local foundation and scope documents prepared;
+Wiki and GitHub tracking published; human approval remains pending. See
+[the M1 checklist](issues/M1.md). The original due date has passed; M1 remains
+open until its exit criteria are met.
+
 Record changes here and update the matching GitHub milestone due date. Keep
 the original date so schedule history remains visible.
 
@@ -23,6 +28,14 @@ the original date so schedule history remains visible.
 | --- | --- | --- | --- | --- | --- |
 
 Presentation dates are provisional until the course calendar is confirmed.
+
+## Live Tracking
+
+Manage milestone status and due dates in
+[GitHub Milestones](https://github.com/Michael-Kowata/ITC-492/milestones).
+Each milestone has an integration branch named `milestone/m1` through
+`milestone/m7`. Keep this schedule as the baseline and date-change history;
+issue acceptance checklists live only on GitHub.
 
 ## Scope Revision: 2026-09-20
 

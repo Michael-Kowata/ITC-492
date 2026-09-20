@@ -25,11 +25,14 @@ interface, and response aggregation are outside the initial scope.
 
 | Path | Purpose |
 | --- | --- |
-| `endpoint-ids/` | Remaining files from the previous project scaffold |
+| [roster-form-automation/](roster-form-automation/README.md) | Python application workspace |
+| [Proposal](docs/proposal.md) | Problem, deliverables, scope, and responsibilities |
+| [Requirements](docs/requirements.md) | Observable acceptance criteria for the script |
+| [M1 issues](docs/issues/M1.md) | Links to live setup, scope, and reporting tasks |
 | [Project workflow](docs/workflow.md) | Task branches, commits, issues, and verification |
 | [Semester schedule](docs/milestones.md) | Milestones, dates, and schedule changes |
-| [Issue backlog](docs/backlog.md) | Tasks to create as GitHub issues |
-| [Wiki Home](wiki/Home.md) | Local source for the six required wiki pages |
+| [Issue backlog](docs/backlog.md) | Index of live GitHub tasks |
+| [GitHub Wiki](https://github.com/Michael-Kowata/ITC-492/wiki) | Home, Log, Design, Results, Reading, and Appendix; updated directly on GitHub |
 | `sandbox/` | One documented experiment per technology evaluated |
 | [AGENT-LOG.md](AGENT-LOG.md) | Codex contributions and human acceptance checks |
 | `paper/` | LaTeX write-up and bibliography |
@@ -38,9 +41,11 @@ interface, and response aggregation are outside the initial scope.
 ## Deliverable Status
 
 - Repository structure: scaffolded; application implementation has not started.
-- GitHub issues and milestones: planned locally, not yet created remotely.
+- GitHub issues and milestones: published; update task status and due dates on GitHub.
 - Milestone calendar: August 24 through November 29, 2026 (14 weeks).
-- Wiki: local Markdown source; not yet published to the GitHub Wiki.
-- Experiments, results, weekly reports, and presentations: templates only.
+- Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
+- M1: proposal, requirements, and remote tracking prepared; scope approval remains pending.
+- Weekly reports: week 4 records project setup and the scope change.
+- Experiments, results, and presentations: templates only.
 
 Start with [the workflow](docs/workflow.md) and [the backlog](docs/backlog.md).

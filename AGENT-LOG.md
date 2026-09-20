@@ -46,6 +46,53 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Acceptance: pending.
 - Limitations: documentation only; no application or Google integration tests.
 
+## 2026-09-20: M1 Foundation and Project Rename
+
+- Request: rename the application workspace and begin the first milestone.
+- Codex work: renamed the scaffold to `roster-form-automation/`; added private
+  working-directory ignore rules, proposal, requirements, and T01-T03 issue
+  drafts; updated navigation, workflow example, M1 status, and week 4 reporting.
+- Codex checks: whitespace checks passed; 23 local Markdown links resolved;
+  all 14 weekly date ranges and six wiki pages verified; renamed workspace
+  verified; ignore rules matched sample data, credential, run-state, environment,
+  virtual-environment, and Python cache paths.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: GitHub fetch still fails for missing HTTPS credentials. Remote
+  issue/milestone creation and wiki publication remain blocked; no runtime
+  functionality or measured experiment results are claimed.
+
+## 2026-09-20: Publish GitHub Wiki
+
+- Request: migrate the local wiki documentation to the initialized GitHub Wiki.
+- Codex work: published Home, Log, Design, Results, Reading, and Appendix;
+  updated Wiki navigation and the migration status in the weekly log. Removed
+  duplicate local pages and updated repository navigation and M1 tracking.
+- Codex checks: Wiki push succeeded; remote HEAD verified as
+  `846d1280c37b1b6e8b298620bd279119845c8c41` before removing local copies.
+  Whitespace checks passed; 17 local Markdown links resolved; all six published
+  page files and the 14 weekly entries verified in the pushed Wiki checkout.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: no application behavior changed; remote issues and milestones
+  are outside this migration and remain outstanding.
+
+## 2026-09-20: Publish Issues and Milestones
+
+- Request: migrate issue and milestone tracking to GitHub and use milestone branches.
+- Codex work: published seven dated milestones and 32 issues (16 implementation
+  tasks, 14 weekly reports, two presentations); retained T16 for final delivery.
+  Replaced local issue checklists with live links and documented task branches
+  feeding milestone/m1 through milestone/m7 before merging into main.
+- Codex checks: verified all 32 issues are open and assigned to the expected
+  milestone, and all seven milestones have due dates. All seven remote branches
+  verified after atomic publication; 14 local Markdown links and whitespace
+  checks passed. M1 contains foundation work; M2-M7 start at current remote main.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: original semester dates retained, including overdue milestones;
+  no unfinished issue was closed and no schedule revision was assumed.
+
 ## Entry Template
 
 - Date and task/issue:

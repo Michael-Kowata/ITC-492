@@ -1,0 +1,12 @@
+# Private inputs, account credentials, and generated run state.
+/data/
+/secrets/
+/runs/
+.env
+.env.*
+!.env.example
+
+# Python development artifacts.
+__pycache__/
+*.py[cod]
+.venv/
