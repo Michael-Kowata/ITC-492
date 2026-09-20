@@ -62,6 +62,21 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   issue/milestone creation and wiki publication remain blocked; no runtime
   functionality or measured experiment results are claimed.
 
+## 2026-09-20: Publish GitHub Wiki
+
+- Request: migrate the local wiki documentation to the initialized GitHub Wiki.
+- Codex work: published Home, Log, Design, Results, Reading, and Appendix;
+  updated Wiki navigation and the migration status in the weekly log. Removed
+  duplicate local pages and updated repository navigation and M1 tracking.
+- Codex checks: Wiki push succeeded; remote HEAD verified as
+  `846d1280c37b1b6e8b298620bd279119845c8c41` before removing local copies.
+  Whitespace checks passed; 17 local Markdown links resolved; all six published
+  page files and the 14 weekly entries verified in the pushed Wiki checkout.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: no application behavior changed; remote issues and milestones
+  are outside this migration and remain outstanding.
+
 ## Entry Template
 
 - Date and task/issue:

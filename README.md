@@ -32,7 +32,7 @@ interface, and response aggregation are outside the initial scope.
 | [Project workflow](docs/workflow.md) | Task branches, commits, issues, and verification |
 | [Semester schedule](docs/milestones.md) | Milestones, dates, and schedule changes |
 | [Issue backlog](docs/backlog.md) | Tasks to create as GitHub issues |
-| [Wiki Home](wiki/Home.md) | Local source for the six required wiki pages |
+| [GitHub Wiki](https://github.com/Michael-Kowata/ITC-492/wiki) | Home, Log, Design, Results, Reading, and Appendix; updated directly on GitHub |
 | `sandbox/` | One documented experiment per technology evaluated |
 | [AGENT-LOG.md](AGENT-LOG.md) | Codex contributions and human acceptance checks |
 | `paper/` | LaTeX write-up and bibliography |
@@ -43,7 +43,7 @@ interface, and response aggregation are outside the initial scope.
 - Repository structure: scaffolded; application implementation has not started.
 - GitHub issues and milestones: planned locally, not yet created remotely.
 - Milestone calendar: August 24 through November 29, 2026 (14 weeks).
-- Wiki: local Markdown source; not yet published to the GitHub Wiki.
+- Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
 - M1: proposal, requirements, and issue drafts prepared; approval and remote tracking pending.
 - Weekly reports: week 4 records project setup and the scope change.
 - Experiments, results, and presentations: templates only.

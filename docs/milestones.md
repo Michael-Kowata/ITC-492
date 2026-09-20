@@ -17,7 +17,7 @@ last week as its due date.
 ## Schedule Changes
 
 M1 status as of 2026-09-20: local foundation and scope documents prepared;
-human approval, remote issues/milestones, and wiki publication pending. See
+Wiki published; human approval and remote issues/milestones pending. See
 [the M1 checklist](issues/M1.md). The original due date has passed; M1 remains
 open until its exit criteria are met.
 

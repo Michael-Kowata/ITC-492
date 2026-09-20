@@ -24,5 +24,14 @@ person accepted a change unless it happened. Record schedule changes in
 `docs/milestones.md`, update GitHub milestone due dates, and mention the change
 in the weekly wiki log.
 
+## Wiki Updates
+
+Edit Home, Log, Design, Results, Reading, and Appendix directly in the
+[GitHub Wiki](https://github.com/Michael-Kowata/ITC-492/wiki). Do not recreate a
+local `wiki/` copy in this repository. The Wiki has its own Git history at
+`https://github.com/Michael-Kowata/ITC-492.wiki.git`; clone it separately for
+scripted edits and commit checks there. Keep proposal, requirements, issue
+plans, and the agent log in the application repository.
+
 The initial scaffold may precede issue creation. Link its finishing commit to
 the setup issue once that issue exists; do not invent issue numbers.
