@@ -3,6 +3,10 @@
 These are local planning IDs, not GitHub issue numbers. Create one issue per
 row, assign its milestone, and replace the pending reference with its URL.
 
+M1 issue bodies and current checklists are in [issues/M1.md](issues/M1.md).
+Local preparation is in progress; remote issue creation and human acceptance
+are still outstanding.
+
 | ID | Issue | Milestone | Completion evidence | GitHub issue |
 | --- | --- | --- | --- | --- |
 | T01 | Establish repository deliverable structure | M1 | Links and templates checked; human review recorded | Pending |

@@ -46,6 +46,22 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Acceptance: pending.
 - Limitations: documentation only; no application or Google integration tests.
 
+## 2026-09-20: M1 Foundation and Project Rename
+
+- Request: rename the application workspace and begin the first milestone.
+- Codex work: renamed the scaffold to `roster-form-automation/`; added private
+  working-directory ignore rules, proposal, requirements, and T01-T03 issue
+  drafts; updated navigation, workflow example, M1 status, and week 4 reporting.
+- Codex checks: whitespace checks passed; 23 local Markdown links resolved;
+  all 14 weekly date ranges and six wiki pages verified; renamed workspace
+  verified; ignore rules matched sample data, credential, run-state, environment,
+  virtual-environment, and Python cache paths.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: GitHub fetch still fails for missing HTTPS credentials. Remote
+  issue/milestone creation and wiki publication remain blocked; no runtime
+  functionality or measured experiment results are claimed.
+
 ## Entry Template
 
 - Date and task/issue:

@@ -25,7 +25,10 @@ interface, and response aggregation are outside the initial scope.
 
 | Path | Purpose |
 | --- | --- |
-| `endpoint-ids/` | Remaining files from the previous project scaffold |
+| [roster-form-automation/](roster-form-automation/README.md) | Python application workspace |
+| [Proposal](docs/proposal.md) | Problem, deliverables, scope, and responsibilities |
+| [Requirements](docs/requirements.md) | Observable acceptance criteria for the script |
+| [M1 issues](docs/issues/M1.md) | Detailed setup, scope, and reporting tasks |
 | [Project workflow](docs/workflow.md) | Task branches, commits, issues, and verification |
 | [Semester schedule](docs/milestones.md) | Milestones, dates, and schedule changes |
 | [Issue backlog](docs/backlog.md) | Tasks to create as GitHub issues |
@@ -41,6 +44,8 @@ interface, and response aggregation are outside the initial scope.
 - GitHub issues and milestones: planned locally, not yet created remotely.
 - Milestone calendar: August 24 through November 29, 2026 (14 weeks).
 - Wiki: local Markdown source; not yet published to the GitHub Wiki.
-- Experiments, results, weekly reports, and presentations: templates only.
+- M1: proposal, requirements, and issue drafts prepared; approval and remote tracking pending.
+- Weekly reports: week 4 records project setup and the scope change.
+- Experiments, results, and presentations: templates only.
 
 Start with [the workflow](docs/workflow.md) and [the backlog](docs/backlog.md).

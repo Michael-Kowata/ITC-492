@@ -13,7 +13,7 @@
 Example commit message (replace placeholders with actual evidence):
 
 ```text
-feat: collect authentication events
+feat: extract student names from a roster image
 
 Checked: <command or manual check and actual outcome>
 Fixes #<issue-number>

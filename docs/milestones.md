@@ -16,6 +16,11 @@ last week as its due date.
 
 ## Schedule Changes
 
+M1 status as of 2026-09-20: local foundation and scope documents prepared;
+human approval, remote issues/milestones, and wiki publication pending. See
+[the M1 checklist](issues/M1.md). The original due date has passed; M1 remains
+open until its exit criteria are met.
+
 Record changes here and update the matching GitHub milestone due date. Keep
 the original date so schedule history remains visible.
 
