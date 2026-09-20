@@ -93,6 +93,21 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limitations: original semester dates retained, including overdue milestones;
   no unfinished issue was closed and no schedule revision was assumed.
 
+## 2026-09-20: Accept Repository Structure (Issue #5)
+
+- Request: record the project owner's confirmation that the structure covers
+  every requested deliverable.
+- Codex work: recorded human acceptance and prepared the finishing commit for
+  T01, GitHub issue #5.
+- Codex checks: the preceding issue review verified 14 local Markdown links,
+  private-directory ignore behavior, and whitespace; all passed.
+- Human checks before acceptance: the project owner confirmed the repository,
+  issues, milestones, wiki, sandbox, AGENT-LOG.md, paper, and presentations cover
+  every requested deliverable.
+- Acceptance: accepted for repository structure (T01) by the project owner.
+- Limitations: this accepts the structure, not application functionality or
+  other M1 issues. Automatic issue closure awaits the finishing commit on main.
+
 ## Entry Template
 
 - Date and task/issue:
