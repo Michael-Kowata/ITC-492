@@ -1,14 +1,31 @@
-# ITC-492: Intrusion Detection System
+# ITC-492: Student Roster Form Automation
 
-Senior capstone project organized around a 14-week semester. The application
-currently contains only a Python scaffold. Target OS and detection scope are
-pending design decisions.
+Senior capstone project organized around a 14-week semester. A Python script
+will extract student names from a roster screenshot, let the user correct them,
+create a Google Sheet, and copy a template Google Form separately for each
+student. Each roster row will contain the student's name and their own form's
+responder link. Implementation has not started.
+
+## Focused Scope
+
+1. Accept a saved roster screenshot; direct screen capture is a later option.
+2. Extract names with OCR and require review before creating Google resources.
+3. Create a Google Sheet from the approved roster.
+4. Copy one existing template into a distinct Google Form per student, with
+   the student's name in its title and independent responses.
+5. Write the matching responder link beside each name.
+
+The initial version targets one roster layout, one template, and one Google
+account. A shared form with prefilled links does not meet the requirement.
+Duplicate names remain separate roster entries. Interrupted runs must resume
+without creating duplicate forms. Public roster sharing, email delivery, a web
+interface, and response aggregation are outside the initial scope.
 
 ## Repository Map
 
 | Path | Purpose |
 | --- | --- |
-| `endpoint-ids/` | IDS application and, as implemented, its tests |
+| `endpoint-ids/` | Remaining files from the previous project scaffold |
 | [Project workflow](docs/workflow.md) | Task branches, commits, issues, and verification |
 | [Semester schedule](docs/milestones.md) | Milestones, dates, and schedule changes |
 | [Issue backlog](docs/backlog.md) | Tasks to create as GitHub issues |

@@ -1,4 +1,4 @@
-# IDS Capstone Wiki
+# Student Roster Form Automation Wiki
 
 - [Log](Log.md): weekly progress and verification
 - [Design](Design.md): requirements and architecture

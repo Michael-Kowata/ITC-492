@@ -18,7 +18,7 @@ Actual output, limitations, and evidence paths:
 
 ## What It Showed
 
-Conclusion, suitability for the IDS, and decision with reasons:
+Conclusion, suitability for roster and form automation, and decision with reasons:
 
 ## Cleanup
 
