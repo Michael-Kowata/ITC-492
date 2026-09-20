@@ -108,6 +108,19 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limitations: this accepts the structure, not application functionality or
   other M1 issues. Automatic issue closure awaits the finishing commit on main.
 
+## 2026-09-20: Task Lifecycle and Zoom Input Baseline
+
+- Request: use one branch per task, integrate into the milestone, and clean up
+  completed branches; implement the previously confirmed Participants panel input.
+- Codex work: documented issue closure after milestone integration and branch
+  deletion after completion; clarified visible-name input and M2 sample validation.
+- Codex checks: documentation whitespace checked; no OCR implementation tested.
+- Human checks before acceptance: owner confirmed Participants panel input and
+  the branch lifecycle. Overall proposal acceptance remains pending.
+- Acceptance: input and workflow decisions confirmed; issue #6 remains in progress.
+- Follow-up: issue #5 is already accepted and integrated, so close it and remove
+  its task branch under the updated workflow. Retain issue #6's active branch.
+
 ## Entry Template
 
 - Date and task/issue:

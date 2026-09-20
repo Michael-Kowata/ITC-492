@@ -1,7 +1,8 @@
 # Requirements and Acceptance Criteria
 
 Status: proposed baseline, with the separate-form requirement confirmed by the
-project owner. Advisor approval and the input layout remain to be confirmed.
+project owner. Zoom's Participants panel is the confirmed input layout;
+full proposal acceptance remains pending. Sample validation belongs to M2.
 
 ## Workflow
 
@@ -10,7 +11,7 @@ Sheet -> copy template per student -> write each matching responder link.
 
 | ID | Requirement | Acceptance evidence | Task |
 | --- | --- | --- | --- |
-| R01 | Read one PNG or JPEG containing one column of names | Synthetic fixture accepted; missing, invalid, or empty input stops before Google writes | T07 |
+| R01 | Read one PNG or JPEG of Zoom's Participants panel | Extract visible names, excluding controls and role/self labels; missing, invalid, or empty input stops before Google writes | T07 |
 | R02 | Allow correction, removal, and addition of extracted names | Operator can inspect the complete roster and cancel with no Google resources created | T08 |
 | R03 | Give each approved entry a stable ID | Two identical names remain separate entries throughout a run and resume | T08 |
 | R04 | Create a Google Sheet for the approved roster | Exactly one row per approved entry, with entry ID, name, responder link, and status | T09 |
@@ -23,12 +24,13 @@ Sheet -> copy template per student -> write each matching responder link.
 
 ## Evaluation Baseline
 
-Use a proposed 20-entry synthetic roster containing two identical display names.
+Use a fictional-name Participants panel sample with two identical display names.
+Target 20 names if they fit legibly; otherwise record the actual visible count.
 Compare OCR output with a checked expected roster before manual correction and
 report exact-name accuracy and correction count. Do not claim an OCR accuracy
 threshold until the M2 experiment establishes a realistic target.
 
-After review, require 20 distinct forms and 20 correct name-to-link mappings,
+After review, require one distinct form and correct link per approved entry,
 with zero additional forms after replaying the same interrupted run. Record total
 runtime and the account, template settings, OS, versions, and commit used.
 These are planned checks, not completed results.
@@ -41,5 +43,7 @@ These are planned checks, not completed results.
 - No automatic public sharing, email distribution, or identity enforcement.
 - An individual form is not proof of the respondent's identity; access settings
   need to be tested with the intended audience.
-- Initial image layout, template settings, Google authentication method, and
+- The operator corrects display names and removes non-students. Hidden names,
+  gallery-view tiles, scrolling, and multiple screenshots are outside initial scope.
+- Sample layout validation, template settings, Google authentication method, and
   performance target remain decisions for the technology trials.
