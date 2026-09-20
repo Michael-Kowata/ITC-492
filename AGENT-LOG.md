@@ -77,6 +77,21 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limitations: no application behavior changed; remote issues and milestones
   are outside this migration and remain outstanding.
 
+## 2026-09-20: Publish Issues and Milestones
+
+- Request: migrate issue and milestone tracking to GitHub and use milestone branches.
+- Codex work: published seven dated milestones and 32 issues (16 implementation
+  tasks, 14 weekly reports, two presentations); retained T16 for final delivery.
+  Replaced local issue checklists with live links and documented task branches
+  feeding milestone/m1 through milestone/m7 before merging into main.
+- Codex checks: verified all 32 issues are open and assigned to the expected
+  milestone, and all seven milestones have due dates. Branch publication and
+  final documentation checks pending.
+- Human checks before acceptance: not reported.
+- Acceptance: pending.
+- Limitations: original semester dates retained, including overdue milestones;
+  no unfinished issue was closed and no schedule revision was assumed.
+
 ## Entry Template
 
 - Date and task/issue:
