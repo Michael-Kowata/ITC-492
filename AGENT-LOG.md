@@ -85,8 +85,9 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   Replaced local issue checklists with live links and documented task branches
   feeding milestone/m1 through milestone/m7 before merging into main.
 - Codex checks: verified all 32 issues are open and assigned to the expected
-  milestone, and all seven milestones have due dates. Branch publication and
-  final documentation checks pending.
+  milestone, and all seven milestones have due dates. All seven remote branches
+  verified after atomic publication; 14 local Markdown links and whitespace
+  checks passed. M1 contains foundation work; M2-M7 start at current remote main.
 - Human checks before acceptance: not reported.
 - Acceptance: pending.
 - Limitations: original semester dates retained, including overdue milestones;
