@@ -16,13 +16,16 @@ independent copy of an existing Google Form for every approved roster entry.
 ## Initial Scope
 
 - One operator, one Google account, one form template, and one roster per run.
-- A saved PNG or JPEG with a single column of printed student names, one per line.
+- A saved PNG or JPEG of Zoom's Participants panel, containing visible names.
+- Exclude interface controls and role/self labels; let the operator remove non-students.
 - Manual review and correction before creating any Google resources.
 - Student name in each copied form's title and its responder link in the roster.
 - Duplicate-name support and recovery from interrupted runs.
 
-The saved-image format is a proposed baseline for the first implementation;
-confirm it against a synthetic sample before M2 concludes. Direct screen capture,
+The owner confirmed the Participants panel input. Validate it against a sample
+with fictional names in M2; sample testing is not needed to define M1 scope.
+Only names visible in one screenshot are included. Gallery tiles, scrolling,
+and combining screenshots are deferred. Direct screen capture,
 handwriting, arbitrary table layouts, email delivery, dashboards, grading, and
 aggregating responses are outside the initial scope.
 

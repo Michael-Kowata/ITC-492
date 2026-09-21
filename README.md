@@ -8,7 +8,7 @@ responder link. Implementation has not started.
 
 ## Focused Scope
 
-1. Accept a saved roster screenshot; direct screen capture is a later option.
+1. Accept a saved Zoom Participants panel screenshot; direct capture is a later option.
 2. Extract names with OCR and require review before creating Google resources.
 3. Create a Google Sheet from the approved roster.
 4. Copy one existing template into a distinct Google Form per student, with

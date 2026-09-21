@@ -8,9 +8,17 @@
 4. Update relevant documentation and AGENT-LOG.md for Codex-assisted work.
 5. Put `Fixes #<issue-number>` in the commit that completes the issue. Use `Refs`
    in intermediate commits. Verify acceptance criteria before finishing.
-6. Merge task branches into their milestone branch, then merge the completed
-   milestone into `main`. Confirm GitHub closes completed issues when the
-   closing commits reach the default branch. Preserve closing keywords if squashing.
+6. Reuse one task branch per issue, including documentation and clarifications.
+   When acceptance criteria are met, merge and push it to the milestone branch,
+   link its finishing commit on the issue, and close the issue as completed.
+   Delete the merged task branch locally and remotely after verifying publication.
+7. When all milestone tasks and exit criteria are complete, merge and push the
+   milestone to `main`, close the GitHub milestone, and delete its branch locally
+   and remotely. Do not delete a branch containing unmerged work.
+
+GitHub closing keywords act automatically only on the default branch. Close a
+completed issue explicitly after milestone integration so it does not remain
+open until the end of the milestone. Preserve `Fixes` references as evidence.
 
 Example commit message (replace placeholders with actual evidence):
 
