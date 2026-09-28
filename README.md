@@ -44,7 +44,7 @@ application, and response aggregation are outside the initial scope.
 - GitHub issues and milestones: published; update task status and due dates on GitHub.
 - Milestone calendar: August 24 through November 29, 2026 (14 weeks).
 - Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
-- M1: proposal, requirements, and remote tracking prepared; scope approval remains pending.
+- M1: proposal, requirements, and remote tracking prepared; project-owner baseline acceptance recorded; remaining M1 tasks tracked on GitHub.
 - Weekly reports: week 4 records project setup and the scope change.
 - Experiments, results, and presentations: templates only.
 

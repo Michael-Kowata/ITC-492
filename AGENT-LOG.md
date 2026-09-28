@@ -131,6 +131,16 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   passed; Wiki design published as 5df238f. No application behavior tested.
 - Limitations: no runtime implementation; milestone dates unchanged.
 
+## 2026-09-27: Accept Revised Baseline (Issue #6)
+
+- Human review: owner accepted the proposed workflow and requested implementation
+  of the JavaScript Apps Script/sidebar revisions, then authorized closing
+  issues whose requirements are met.
+- Acceptance: project-owner acceptance recorded for the M1 baseline.
+- Codex work: aligned requirements and README with that acceptance.
+- Checks: documentation whitespace verified; no runtime result claimed.
+- Limits: OCR trials remain in M2; no advisor approval or presentation claimed.
+
 ## Entry Template
 
 - Date and task/issue:

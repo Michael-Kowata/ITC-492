@@ -2,7 +2,8 @@
 
 Status: proposed baseline, with the separate-form requirement confirmed by the
 project owner. Zoom's Participants panel is the confirmed input layout;
-full proposal acceptance remains pending. Sample validation belongs to M2.
+The project owner accepted the revised baseline, including Apps Script and sidebar
+upload. Sample validation belongs to M2; advisor approval is not claimed.
 
 ## Workflow
 
