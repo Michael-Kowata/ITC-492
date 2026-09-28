@@ -15,3 +15,5 @@ questions received, and follow-up issues.
 - Open the weekly log, design, experiment evidence, or results as appropriate.
 - Demonstrate implemented behavior using a rehearsed scenario.
 - Record feedback and create follow-up issues with milestones.
+
+Proposal: [September 28 deck and notes](2026-09-28-proposal/README.md).

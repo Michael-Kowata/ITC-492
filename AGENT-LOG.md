@@ -151,6 +151,15 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   start and original due dates. Presentation completion remains unconfirmed.
 - Checks: Wiki and repository whitespace passed; owner account used as evidence.
 
+## 2026-09-28: Proposal Presentation Preparation
+
+- Owner confirmed September 28 as the proposal presentation date.
+- Prepared an eight-slide HTML deck, speaker notes, repository walkthrough,
+  and post-delivery feedback record. All output examples are fictional.
+- Checks: eight slide sections, navigation elements, print CSS, and whitespace
+  verified. Browser rendering not tested: browser automation is unavailable.
+- Delivery and feedback remain pending; no application demo results claimed.
+
 ## Entry Template
 
 - Date and task/issue:

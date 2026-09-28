@@ -27,7 +27,8 @@ the original date so schedule history remains visible.
 | Recorded on | Milestone | Previous due date | New due date | Reason | Affected issues |
 | --- | --- | --- | --- | --- | --- |
 
-Presentation dates are provisional until the course calendar is confirmed.
+Proposal presentation: **September 28, 2026**, confirmed by the owner.
+Progress and final presentation dates remain provisional.
 
 ## Live Tracking
 
