@@ -55,3 +55,14 @@ OCR may require temporary Drive resources. M2 will select OCR, authorization
 scopes, upload limits, persistent cloud run state, and cleanup on success,
 failure, or cancellation. M3 implements upload and review. No OCR results are
 claimed and milestone dates are unchanged.
+
+## Schedule Context (2026-09-27)
+
+The owner clarified that milestone dates are planning placeholders. The semester
+still begins August 24. GitHub reports repository creation at September 15,
+2026, 00:50:42 UTC (September 14, 17:50:42 America/Los_Angeles), during week 4.
+This is a separate event from early research and development-environment setup.
+Do not shift all 14 weeks to the repository date or backdate completion. Retain
+original targets until specific replacements are chosen; exact presentation
+dates remain tracked in issue #35. Weeks 1-2 now contain owner-provided
+retrospective accounts in the Wiki.

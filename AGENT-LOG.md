@@ -141,6 +141,16 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Checks: documentation whitespace verified; no runtime result claimed.
 - Limits: OCR trials remain in M2; no advisor approval or presentation claimed.
 
+## 2026-09-27: Weekly Reports and Schedule Context
+
+- Owner supplied a combined weeks 1-2 account: suitable-project research and
+  baseline GitHub/VS Code setup. Published as explicitly retrospective Wiki
+  entries in c6b3470; no contemporaneous evidence or delivery dates invented.
+- GitHub API verified repository creation on September 14 local time.
+- Recorded that milestone dates are planning targets, preserving the semester
+  start and original due dates. Presentation completion remains unconfirmed.
+- Checks: Wiki and repository whitespace passed; owner account used as evidence.
+
 ## Entry Template
 
 - Date and task/issue:
