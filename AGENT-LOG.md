@@ -121,6 +121,16 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Follow-up: issue #5 is already accepted and integrated, so close it and remove
   its task branch under the updated workflow. Retain issue #6's active branch.
 
+## 2026-09-27: Apps Script Sidebar Baseline
+
+- Request: adopt JavaScript Apps Script with direct sidebar screenshot upload.
+- Codex work: updated baseline and milestone scope; removed the empty Python
+  dependency placeholder. M2 covers OCR and temporary-resource cleanup.
+- Human review: owner accepted the control spreadsheet baseline and sidebar upload.
+- Checks: 14 local Markdown links resolved; repository and Wiki whitespace checks
+  passed; Wiki design published as 5df238f. No application behavior tested.
+- Limitations: no runtime implementation; milestone dates unchanged.
+
 ## Entry Template
 
 - Date and task/issue:
