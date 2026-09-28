@@ -131,6 +131,35 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   passed; Wiki design published as 5df238f. No application behavior tested.
 - Limitations: no runtime implementation; milestone dates unchanged.
 
+## 2026-09-27: Accept Revised Baseline (Issue #6)
+
+- Human review: owner accepted the proposed workflow and requested implementation
+  of the JavaScript Apps Script/sidebar revisions, then authorized closing
+  issues whose requirements are met.
+- Acceptance: project-owner acceptance recorded for the M1 baseline.
+- Codex work: aligned requirements and README with that acceptance.
+- Checks: documentation whitespace verified; no runtime result claimed.
+- Limits: OCR trials remain in M2; no advisor approval or presentation claimed.
+
+## 2026-09-27: Weekly Reports and Schedule Context
+
+- Owner supplied a combined weeks 1-2 account: suitable-project research and
+  baseline GitHub/VS Code setup. Published as explicitly retrospective Wiki
+  entries in c6b3470; no contemporaneous evidence or delivery dates invented.
+- GitHub API verified repository creation on September 14 local time.
+- Recorded that milestone dates are planning targets, preserving the semester
+  start and original due dates. Presentation completion remains unconfirmed.
+- Checks: Wiki and repository whitespace passed; owner account used as evidence.
+
+## 2026-09-28: Proposal Presentation Preparation
+
+- Owner confirmed September 28 as the proposal presentation date.
+- Prepared an eight-slide HTML deck, speaker notes, repository walkthrough,
+  and post-delivery feedback record. All output examples are fictional.
+- Checks: eight slide sections, navigation elements, print CSS, and whitespace
+  verified. Browser rendering not tested: browser automation is unavailable.
+- Delivery and feedback remain pending; no application demo results claimed.
+
 ## Entry Template
 
 - Date and task/issue:
