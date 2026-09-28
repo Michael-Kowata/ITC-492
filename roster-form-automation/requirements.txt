@@ -1,1 +1,0 @@
-# Add dependencies after the M2 OCR and Google integration experiments.

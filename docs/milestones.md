@@ -7,8 +7,8 @@ last week as its due date.
 | ID | Milestone | Weeks | Start | Due | Exit evidence |
 | --- | --- | --- | --- | --- | --- |
 | M1 | Scope and project foundation | 1-2 | 2026-08-24 | 2026-09-06 | Approved scope, workflow, issue board, wiki |
-| M2 | Design and technology trials | 3-4 | 2026-09-07 | 2026-09-20 | OCR and Google integration experiments |
-| M3 | Screenshot extraction and review | 5-6 | 2026-09-21 | 2026-10-04 | Correctable roster with duplicate-name handling |
+| M2 | Design and technology trials | 3-4 | 2026-09-07 | 2026-09-20 | Apps Script sidebar upload, OCR, temporary storage, and Google integration trials |
+| M3 | Screenshot extraction and review | 5-6 | 2026-09-21 | 2026-10-04 | Validated sidebar upload and staging-tab approval with duplicate-name handling |
 | M4 | Sheet and individual form creation | 7-8 | 2026-10-05 | 2026-10-18 | Distinct template copy per approved student |
 | M5 | Link matching and recovery | 9-10 | 2026-10-19 | 2026-11-01 | Matching responder links and duplicate-free retries |
 | M6 | Evaluation and documentation | 11-12 | 2026-11-02 | 2026-11-15 | OCR accuracy, form/link checks, installation guide |
@@ -43,3 +43,15 @@ Replaced the IDS scope with roster-to-form automation. Semester dates remain
 unchanged; milestone dates are targets, not evidence of completion. Review the
 M2 technology trials immediately because its target date is today. Record any
 necessary date changes in the table above after replanning.
+
+## Sidebar Upload Baseline (2026-09-27)
+
+A control spreadsheet hosts the custom menu, HTML sidebar, and roster review
+staging tab. Upload a PNG or JPEG directly from the computer; no manual Drive
+upload is required. After approval, generate a separate roster spreadsheet
+and one template-based form per student.
+
+OCR may require temporary Drive resources. M2 will select OCR, authorization
+scopes, upload limits, persistent cloud run state, and cleanup on success,
+failure, or cancellation. M3 implements upload and review. No OCR results are
+claimed and milestone dates are unchanged.

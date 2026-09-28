@@ -1,6 +1,6 @@
 # ITC-492: Student Roster Form Automation
 
-Senior capstone project organized around a 14-week semester. A Python script
+Senior capstone project organized around a 14-week semester. A JavaScript Google Apps Script project
 will extract student names from a roster screenshot, let the user correct them,
 create a Google Sheet, and copy a template Google Form separately for each
 student. Each roster row will contain the student's name and their own form's
@@ -8,8 +8,8 @@ responder link. Implementation has not started.
 
 ## Focused Scope
 
-1. Accept a saved Zoom Participants panel screenshot; direct capture is a later option.
-2. Extract names with OCR and require review before creating Google resources.
+1. Upload a Zoom Participants panel screenshot from the computer through a Sheets sidebar.
+2. Extract names with OCR and require staging-tab review before creating the output roster and student forms.
 3. Create a Google Sheet from the approved roster.
 4. Copy one existing template into a distinct Google Form per student, with
    the student's name in its title and independent responses.
@@ -18,14 +18,14 @@ responder link. Implementation has not started.
 The initial version targets one roster layout, one template, and one Google
 account. A shared form with prefilled links does not meet the requirement.
 Duplicate names remain separate roster entries. Interrupted runs must resume
-without creating duplicate forms. Public roster sharing, email delivery, a web
-interface, and response aggregation are outside the initial scope.
+without creating duplicate forms. Public roster sharing, email delivery, a standalone web
+application, and response aggregation are outside the initial scope.
 
 ## Repository Map
 
 | Path | Purpose |
 | --- | --- |
-| [roster-form-automation/](roster-form-automation/README.md) | Python application workspace |
+| [roster-form-automation/](roster-form-automation/README.md) | Google Apps Script application workspace |
 | [Proposal](docs/proposal.md) | Problem, deliverables, scope, and responsibilities |
 | [Requirements](docs/requirements.md) | Observable acceptance criteria for the script |
 | [M1 issues](docs/issues/M1.md) | Links to live setup, scope, and reporting tasks |

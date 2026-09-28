@@ -9,7 +9,7 @@ for mismatched links.
 
 ## Objective
 
-Build a Python command-line script that takes a saved roster screenshot, lets
+Build a JavaScript Google Apps Script project that accepts a sidebar screenshot upload, lets
 the operator correct extracted names, creates a Google Sheet, and makes one
 independent copy of an existing Google Form for every approved roster entry.
 
@@ -18,7 +18,8 @@ independent copy of an existing Google Form for every approved roster entry.
 - One operator, one Google account, one form template, and one roster per run.
 - A saved PNG or JPEG of Zoom's Participants panel, containing visible names.
 - Exclude interface controls and role/self labels; let the operator remove non-students.
-- Manual review and correction before creating any Google resources.
+- Manual review and correction in a control spreadsheet staging tab before creating
+  the separate output roster spreadsheet and student forms.
 - Student name in each copied form's title and its responder link in the roster.
 - Duplicate-name support and recovery from interrupted runs.
 
@@ -50,3 +51,15 @@ passed; record actual progress in week 4 and retain the original dates until a
 revised schedule is agreed. Authentication and form-copy behavior must be proven
 in M2; OCR errors are handled through mandatory roster review. Test with synthetic
 names and keep private inputs and credentials out of version control.
+
+## Sidebar Upload Baseline (2026-09-27)
+
+A control spreadsheet hosts the custom menu, HTML sidebar, and roster review
+staging tab. Upload a PNG or JPEG directly from the computer; no manual Drive
+upload is required. After approval, generate a separate roster spreadsheet
+and one template-based form per student.
+
+OCR may require temporary Drive resources. M2 will select OCR, authorization
+scopes, upload limits, persistent cloud run state, and cleanup on success,
+failure, or cancellation. M3 implements upload and review. No OCR results are
+claimed and milestone dates are unchanged.

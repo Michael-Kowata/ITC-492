@@ -6,13 +6,13 @@ full proposal acceptance remains pending. Sample validation belongs to M2.
 
 ## Workflow
 
-Saved image -> extract names -> operator corrects and approves -> create roster
+Sheets sidebar upload -> OCR -> staging-tab review and approval -> create separate roster
 Sheet -> copy template per student -> write each matching responder link.
 
 | ID | Requirement | Acceptance evidence | Task |
 | --- | --- | --- | --- |
-| R01 | Read one PNG or JPEG of Zoom's Participants panel | Extract visible names, excluding controls and role/self labels; missing, invalid, or empty input stops before Google writes | T07 |
-| R02 | Allow correction, removal, and addition of extracted names | Operator can inspect the complete roster and cancel with no Google resources created | T08 |
+| R01 | Upload one PNG or JPEG of Zoom's Participants panel through a Sheets sidebar | Extract visible names, excluding controls and role/self labels; validate missing, invalid, empty, and oversized input before processing | T07 |
+| R02 | Allow correction, removal, and addition of extracted names | Operator can inspect the complete roster and cancel without creating output rosters or student forms; temporary OCR resources follow the cleanup policy | T08 |
 | R03 | Give each approved entry a stable ID | Two identical names remain separate entries throughout a run and resume | T08 |
 | R04 | Create a Google Sheet for the approved roster | Exactly one row per approved entry, with entry ID, name, responder link, and status | T09 |
 | R05 | Make a distinct copy of the template for every entry | Unique form ID per entry; name in title; template questions preserved; source template unchanged | T10 |
@@ -20,7 +20,7 @@ Sheet -> copy template per student -> write each matching responder link.
 | R07 | Match names to responder links | Every completed row opens the corresponding form as an intended respondent, not its editor | T11 |
 | R08 | Resume without extra resources | Interrupt after Sheet creation, form copy, state save, and row update; retry finds existing resources and completes remaining work | T12 |
 | R09 | Report partial failures | Failed entries have an actionable status; successful entries and resource IDs remain recoverable | T12 |
-| R10 | Protect private working data | Screenshots, real names, credentials, and run state use ignored directories; committed fixtures use synthetic names | T06, T14 |
+| R10 | Protect private working data | Local private artifacts use ignored directories; cloud data access and cleanup are documented; committed fixtures use synthetic names | T06, T14 |
 
 ## Evaluation Baseline
 
@@ -37,8 +37,8 @@ These are planned checks, not completed results.
 
 ## Constraints and Open Decisions
 
-- Python command-line application; dependencies selected in M2.
-- Linux development environment; supported runtime platforms confirmed in M2.
+- JavaScript in Google Apps Script V8, bound to a control spreadsheet; server logic in `Code.gs` and sidebar UI in `Sidebar.html`.
+- Users select a local image from Downloads or another folder; no manual Drive upload or Drive link is required.
 - One authenticated Google account that can access the template and create resources.
 - No automatic public sharing, email distribution, or identity enforcement.
 - An individual form is not proof of the respondent's identity; access settings
@@ -47,3 +47,15 @@ These are planned checks, not completed results.
   gallery-view tiles, scrolling, and multiple screenshots are outside initial scope.
 - Sample layout validation, template settings, Google authentication method, and
   performance target remain decisions for the technology trials.
+
+## Sidebar Upload Baseline (2026-09-27)
+
+A control spreadsheet hosts the custom menu, HTML sidebar, and roster review
+staging tab. Upload a PNG or JPEG directly from the computer; no manual Drive
+upload is required. After approval, generate a separate roster spreadsheet
+and one template-based form per student.
+
+OCR may require temporary Drive resources. M2 will select OCR, authorization
+scopes, upload limits, persistent cloud run state, and cleanup on success,
+failure, or cancellation. M3 implements upload and review. No OCR results are
+claimed and milestone dates are unchanged.
