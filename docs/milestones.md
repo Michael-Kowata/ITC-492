@@ -16,6 +16,11 @@ last week as its due date.
 
 ## Schedule Changes
 
+M1 completed October 28, 2026: project-owner scope acceptance, repository
+foundation, tracking, Wiki, retrospective reports, and proposal presentation
+evidence are recorded. Original target dates remain as planning history.
+The next milestone is M2, Design and technology trials.
+
 M1 status as of 2026-09-20: local foundation and scope documents prepared;
 Wiki and GitHub tracking published; human approval remains pending. See
 [the M1 checklist](issues/M1.md). The original due date has passed; M1 remains

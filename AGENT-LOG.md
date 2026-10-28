@@ -195,6 +195,17 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limits: PDF compilation remains unverified because no LaTeX toolchain is installed.
 - Human acceptance: pending review.
 
+## 2026-10-28: Complete M1 and Proposal Presentation
+
+- Owner reported a successful proposal presentation and requested M1 completion.
+- Recorded delivery evidence and feedback in the presentation README, including
+  links to paper commits and ongoing issues #19 and #9.
+- Actual presentation date and displayed commit remain unspecified; no details
+  beyond the owner report are inferred.
+- Checks: GitHub showed #35 as the sole open M1 issue; paper feedback changes
+  are already on main. Final whitespace and publication checks follow.
+- Acceptance: M1 scope and presentation completion supported by owner reports.
+
 ## Entry Template
 
 - Date and task/issue:

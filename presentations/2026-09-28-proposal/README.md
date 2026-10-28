@@ -2,12 +2,12 @@
 
 - Scheduled date: September 28, 2026
 - Audience: ITC-492 class and instructor
-- Status: prepared; delivery and feedback pending
+- Status: delivered successfully, as reported by the project owner on October 28, 2026
 - Issue: https://github.com/Michael-Kowata/ITC-492/issues/35
 - Format: open `slides.html` in a browser; print to PDF in landscape if needed.
 - Controls: arrow keys or Previous/Next; Home/End jump to first/last slide.
 - Suggested duration: 7-10 minutes including the repository walkthrough.
-- Demonstrated commit: record the actual commit used after delivery.
+- Demonstrated commit: not recorded; preparation commit is `a1ce678`.
 
 ## Repository Walkthrough
 
@@ -45,11 +45,16 @@ illustrative roster in the deck uses fictional names and contains no real forms.
 
 ## After Delivery
 
-- Actual date and demonstrated commit:
-- Questions and feedback:
-- Scope or design changes agreed:
-- Follow-up issue URLs and milestones:
-- Verification of delivery and reviewer:
-
-Complete this record after the presentation; then link the finishing commit and
-close #35 only when its acceptance checklist is satisfied.
+- Delivery evidence: the project owner reported a successful presentation on
+  October 28. September 28 was the scheduled date; the actual date and displayed
+  commit were not separately supplied.
+- Feedback: develop the paper alongside implementation, organize it across
+  multiple pages, and add research on OCR and its scripting integration.
+- Response: expanded the proposal into a development report (`f66863b`), added
+  OCR research (`b50c7ec`), and split the paper into topic files (`6c7b50e`).
+  These changes are published on `main`.
+- Follow-up: [issue #19](https://github.com/Michael-Kowata/ITC-492/issues/19)
+  tracks continued paper development and final delivery in M7; OCR trials remain
+  in [issue #9](https://github.com/Michael-Kowata/ITC-492/issues/9), M2.
+- Verification: owner report establishes delivery and feedback. No application
+  demonstration, advisor approval, or unreported presentation details are claimed.
