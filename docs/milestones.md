@@ -1,74 +1,67 @@
-# Semester Milestones
+# Project Timeline
 
-Week 1 start date: **2026-08-24**, confirmed by the project owner. Week N starts 7 * (N - 1) days after
-week 1 starts; its end is six days later. Use the final day of each milestone's
-last week as its due date.
+## Revised Baseline: October 28, 2026
 
-| ID | Milestone | Weeks | Start | Due | Exit evidence |
-| --- | --- | --- | --- | --- | --- |
-| M1 | Scope and project foundation | 1-2 | 2026-08-24 | 2026-09-06 | Approved scope, workflow, issue board, wiki |
-| M2 | Design and technology trials | 3-4 | 2026-09-07 | 2026-09-20 | Apps Script sidebar upload, OCR, temporary storage, and Google integration trials |
-| M3 | Screenshot extraction and review | 5-6 | 2026-09-21 | 2026-10-04 | Validated sidebar upload and staging-tab approval with duplicate-name handling |
-| M4 | Sheet and individual form creation | 7-8 | 2026-10-05 | 2026-10-18 | Distinct template copy per approved student |
-| M5 | Link matching and recovery | 9-10 | 2026-10-19 | 2026-11-01 | Matching responder links and duplicate-free retries |
-| M6 | Evaluation and documentation | 11-12 | 2026-11-02 | 2026-11-15 | OCR accuracy, form/link checks, installation guide |
-| M7 | Final delivery | 13-14 | 2026-11-16 | 2026-11-29 | Paper, bibliography, final presentation, release |
+The project owner authorized development beyond November 29. The original
+14-week semester (August 24-November 29, 2026) remains historical context,
+not the current development schedule. This revision does not establish an
+instructor-approved extension or change course submission requirements.
 
-## Schedule Changes
+GitHub records repository creation on September 14, 2026 in America/Los_Angeles
+(September 15 at 00:50:42 UTC). This anchors repository-based foundation work,
+not a claim that application code existed then. Earlier research and tool setup
+remain in the retrospective semester logs. M1 was completed October 28.
 
-M1 completed October 28, 2026: project-owner scope acceptance, repository
-foundation, tracking, Wiki, retrospective reports, and proposal presentation
-evidence are recorded. Original target dates remain as planning history.
-The next milestone is M2, Design and technology trials.
+Remaining milestones use sequential two-week planning windows, retaining the
+original allocation per milestone. Dates are targets, not completion claims.
+Holiday availability, especially during M6, should be reviewed as work proceeds.
 
-M1 status as of 2026-09-20: local foundation and scope documents prepared;
-Wiki and GitHub tracking published; human approval remains pending. See
-[the M1 checklist](issues/M1.md). The original due date has passed; M1 remains
-open until its exit criteria are met.
+| ID | Milestone | Start | Current End / Due | Status |
+| --- | --- | --- | --- | --- |
+| M1 | Scope and project foundation | 2026-09-14 | 2026-10-28 | Completed; actual end |
+| M2 | Design and technology trials | 2026-10-29 | 2026-11-11 | Planned |
+| M3 | Screenshot extraction and review | 2026-11-12 | 2026-11-25 | Planned |
+| M4 | Sheet and individual form creation | 2026-11-26 | 2026-12-09 | Planned |
+| M5 | Link matching and recovery | 2026-12-10 | 2026-12-23 | Planned |
+| M6 | Evaluation and documentation | 2026-12-24 | 2027-01-06 | Planned |
+| M7 | Final delivery | 2027-01-07 | 2027-01-20 | Planned |
 
-Record changes here and update the matching GitHub milestone due date. Keep
-the original date so schedule history remains visible.
+M1's current date reflects actual completion retrospectively; it is not a claim
+that its original deadline was met. M2 trials cover Apps Script sidebar upload,
+OCR, authorization, cloud state, and temporary-file cleanup. M3 implements the
+upload and staging-tab approval. M4-M5 create output forms and correct links
+with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
-| Recorded on | Milestone | Previous due date | New due date | Reason | Affected issues |
-| --- | --- | --- | --- | --- | --- |
+## Change History
 
-Proposal presentation: **September 28, 2026**, confirmed by the owner.
-Progress and final presentation dates remain provisional.
+| Recorded | Milestone | Original Due | Revised Due | Reason |
+| --- | --- | --- | --- | --- |
+| 2026-10-28 | M1 | 2026-09-06 | 2026-10-28 | Actual foundation completion recorded |
+| 2026-10-28 | M2 | 2026-09-20 | 2026-11-11 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M3 | 2026-10-04 | 2026-11-25 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M4 | 2026-10-18 | 2026-12-09 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M5 | 2026-11-01 | 2026-12-23 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M6 | 2026-11-15 | 2027-01-06 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M7 | 2026-11-29 | 2027-01-20 | Replanned after M1; owner permits development beyond semester |
+
+Keep future date changes here and update the corresponding GitHub milestone.
+Do not rewrite historical weekly reports to imply work occurred on different dates.
+
+## Reporting and Presentations
+
+The original 14 semester-week issue titles and Wiki headings remain dated
+August 24-November 29. They record reporting periods, not milestone implementation
+windows. Their original milestone assignments are retained for traceability;
+the revised milestone windows do not redefine those weeks. Add dated progress
+entries for continued work after the semester rather than backdating old entries.
+
+The proposal presentation was scheduled for September 28 and later reported
+successful; its actual delivery date was not separately supplied. Progress and
+final presentation dates must be confirmed independently of development targets.
 
 ## Live Tracking
 
-Manage milestone status and due dates in
-[GitHub Milestones](https://github.com/Michael-Kowata/ITC-492/milestones).
-Each milestone has an integration branch named `milestone/m1` through
-`milestone/m7`. Keep this schedule as the baseline and date-change history;
-issue acceptance checklists live only on GitHub.
-
-## Scope Revision: 2026-09-20
-
-Replaced the IDS scope with roster-to-form automation. Semester dates remain
-unchanged; milestone dates are targets, not evidence of completion. Review the
-M2 technology trials immediately because its target date is today. Record any
-necessary date changes in the table above after replanning.
-
-## Sidebar Upload Baseline (2026-09-27)
-
-A control spreadsheet hosts the custom menu, HTML sidebar, and roster review
-staging tab. Upload a PNG or JPEG directly from the computer; no manual Drive
-upload is required. After approval, generate a separate roster spreadsheet
-and one template-based form per student.
-
-OCR may require temporary Drive resources. M2 will select OCR, authorization
-scopes, upload limits, persistent cloud run state, and cleanup on success,
-failure, or cancellation. M3 implements upload and review. No OCR results are
-claimed and milestone dates are unchanged.
-
-## Schedule Context (2026-09-27)
-
-The owner clarified that milestone dates are planning placeholders. The semester
-still begins August 24. GitHub reports repository creation at September 15,
-2026, 00:50:42 UTC (September 14, 17:50:42 America/Los_Angeles), during week 4.
-This is a separate event from early research and development-environment setup.
-Do not shift all 14 weeks to the repository date or backdate completion. Retain
-original targets until specific replacements are chosen; exact presentation
-dates remain tracked in issue #35. Weeks 1-2 now contain owner-provided
-retrospective accounts in the Wiki.
+[GitHub Milestones](https://github.com/Michael-Kowata/ITC-492/milestones) hold
+current dates and issue status. Milestone branches are created or updated from
+main before work begins and deleted after completion. M1 is closed and its
+branch has been removed. M2 is the next development milestone.

@@ -46,9 +46,10 @@ and checks recorded in AGENT-LOG.md. Advisor approval is not yet recorded.
 
 ## Schedule and Risks
 
-Follow the [semester milestones](milestones.md). M1's original deadline has
-passed; record actual progress in week 4 and retain the original dates until a
-revised schedule is agreed. Authentication and form-copy behavior must be proven
+Follow the [revised project milestones](milestones.md). M1 completed October 28;
+M2-M7 are planned from October 29, 2026 through January 20, 2027. The owner
+authorized development beyond the original semester; course deadlines require
+separate confirmation. Authentication and form-copy behavior must be proven
 in M2; OCR errors are handled through mandatory roster review. Test with synthetic
 names and keep private inputs and credentials out of version control.
 

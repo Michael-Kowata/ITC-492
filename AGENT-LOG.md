@@ -206,6 +206,18 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   are already on main. Final whitespace and publication checks follow.
 - Acceptance: M1 scope and presentation completion supported by owner reports.
 
+## 2026-10-28: Revise Development Timeline
+
+- Owner authorized extending development beyond November 29.
+- Recorded September 14 repository creation and October 28 M1 completion;
+  planned M2-M7 in two-week windows through January 20, 2027.
+- Preserved original semester dates, weekly reporting periods, and target history.
+- Updated project and paper schedule descriptions and published the Wiki timeline.
+- Checks: six contiguous two-week windows verified; whitespace passed; GitHub
+  milestone dates updated with original dates retained and states preserved.
+- Limitations: planning estimates are not course deadline extensions; no future
+  work is represented as complete.
+
 ## Entry Template
 
 - Date and task/issue:

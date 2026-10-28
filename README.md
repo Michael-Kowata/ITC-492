@@ -1,6 +1,6 @@
 # ITC-492: Student Roster Form Automation
 
-Senior capstone project organized around a 14-week semester. A JavaScript Google Apps Script project
+Senior capstone project with a revised development schedule extending beyond the original semester. A JavaScript Google Apps Script project
 will extract student names from a roster screenshot, let the user correct them,
 create a Google Sheet, and copy a template Google Form separately for each
 student. Each roster row will contain the student's name and their own form's
@@ -30,7 +30,7 @@ application, and response aggregation are outside the initial scope.
 | [Requirements](docs/requirements.md) | Observable acceptance criteria for the script |
 | [M1 issues](docs/issues/M1.md) | Links to live setup, scope, and reporting tasks |
 | [Project workflow](docs/workflow.md) | Task branches, commits, issues, and verification |
-| [Semester schedule](docs/milestones.md) | Milestones, dates, and schedule changes |
+| [Project schedule](docs/milestones.md) | Revised milestones, original dates, and schedule changes |
 | [Issue backlog](docs/backlog.md) | Index of live GitHub tasks |
 | [GitHub Wiki](https://github.com/Michael-Kowata/ITC-492/wiki) | Home, Log, Design, Results, Reading, and Appendix; updated directly on GitHub |
 | `sandbox/` | One documented experiment per technology evaluated |
@@ -42,7 +42,7 @@ application, and response aggregation are outside the initial scope.
 
 - Repository structure: scaffolded; application implementation has not started.
 - GitHub issues and milestones: published; update task status and due dates on GitHub.
-- Milestone calendar: August 24 through November 29, 2026 (14 weeks).
+- Development timeline: foundation work from September 14, 2026; M1 completed October 28. M2-M7 targets run October 29, 2026-January 20, 2027.
 - Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
 - M1: completed October 28, 2026; scope, foundation, tracking, and proposal presentation recorded. M2 technology trials are next.
 - Weekly reports: week 4 records project setup and the scope change.
