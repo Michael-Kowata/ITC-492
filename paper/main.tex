@@ -1,31 +1,30 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
-\title{Student Roster Form Automation}
-\author{ITC-492 Capstone}
-\date{\today}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\title{Student Roster Form Automation\\\large Project Proposal and Development Report}
+\author{Michael Kowata\\ITC-492 Senior Capstone}
+\date{Draft updated October 28, 2026}
 \begin{document}
-\maketitle
-\begin{abstract}
-Pending: summarize the problem, implementation, and measured results.
-\end{abstract}
-\section{Introduction}
-Pending: motivation, objectives, and scope.
-\section{Background and Related Work}
-Pending: discuss and cite sources recorded in the reading log.
-\section{Requirements and Data Handling}
-Pending: requirements, assumptions, and acceptance criteria.
-\section{Design and Implementation}
-Pending: architecture, technology trials, and implementation decisions.
-\section{Evaluation Method}
-Pending: environment, scenarios, metrics, and reproduction procedure.
-\section{Results and Discussion}
-Pending: measured results and limitations; no results are claimed yet.
-\section{Conclusion and Future Work}
-Pending: outcomes against objectives and remaining work.
+\input{sections/front-matter}
+\tableofcontents
+\clearpage
+\input{sections/introduction}
+\input{sections/related-work}
+\clearpage
+\input{sections/requirements}
+\input{sections/design}
+\clearpage
+\input{sections/evaluation}
+\input{sections/results}
+\clearpage
+\input{sections/development-plan}
+\input{sections/conclusion}
+\clearpage
 \bibliographystyle{plain}
 \bibliography{references}
+\clearpage
 \appendix
-\section{Supporting Artifacts}
-Pending: repository release, experiment evidence, and demonstration references.
+\input{sections/appendix}
 \end{document}

@@ -1,0 +1,37 @@
+\section{Requirements and Data Handling}
+\subsection{Functional Baseline}
+The requirements below summarize the identifiers maintained in
+\texttt{docs/requirements.md}. Acceptance is based on observable behavior.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{l X}
+\hline
+\textbf{IDs} & \textbf{Required behavior} \\
+\hline
+R01--R02 & Validate a local sidebar upload, extract visible names, and allow
+correction, removal, and addition before explicit approval. \\
+R03--R04 & Preserve a stable identity for every entry, including identical
+display names, and generate one output row per approved entry. \\
+R05--R07 & Create a distinct template copy for every entry, preserve questions
+and independent responses, and write the matching responder URL. \\
+R08--R09 & Resume interrupted work without extra copies and retain actionable
+status information for partially completed entries. \\
+R10 & Protect private artifacts and document cloud access and temporary-resource
+cleanup. Use fictional names in committed test fixtures. \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection{Approval and Privacy}
+The control spreadsheet is the working surface; the generated roster is a
+separate deliverable. Cancellation before approval must not create an output
+roster or student forms. Temporary OCR resources may already exist and must
+follow a documented cleanup policy on success, failure, and cancellation.
+
+Real screenshots, rosters, credentials, and exported run state must not enter
+version control. Local ignore rules support this policy but do not replace
+review of staged files. Cloud permissions, retention, and cleanup mechanisms
+remain design decisions to validate. A form bearing a student's name does not
+authenticate the respondent; access settings must be tested separately.
+

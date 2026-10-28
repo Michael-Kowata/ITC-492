@@ -1,0 +1,88 @@
+\section{Technical Background and Related Work}
+\subsection{Scripting Platform}
+Google Apps Script supports JavaScript through its V8 runtime. It is not a
+standard Node.js or browser runtime, so libraries must be evaluated for that
+environment rather than assumed compatible~\cite{googleAppsScriptV8}.
+This project therefore adopts Apps Script instead of the earlier Python
+command-line assumption.
+
+Google's HTML service supports asynchronous server calls through
+\texttt{google.script.run}. A form containing a file-input field can pass the
+selected file to a server function as a Blob~\cite{googleHtmlCommunication}.
+This supports the proposed local-file upload without requiring the instructor
+to manually upload an image to Drive first. The chosen OCR method may still
+need temporary cloud files; upload convenience does not establish a
+storage-free processing pipeline.
+
+These platform references are technical documentation, not experimental research
+on OCR accuracy. The following research provides context for selecting and
+evaluating an OCR approach; it does not establish performance on Zoom screenshots.
+
+\subsection{Traditional OCR Pipelines}
+Smith's conference paper describes the historical Tesseract engine, including
+line finding, word recognition, and adaptive classification~\cite{smith2007tesseract}.
+It illustrates that OCR involves locating and organizing text as well as
+recognizing characters. The paper concerns the engine described in 2007 and
+should not be treated as a specification or benchmark of current Tesseract releases.
+
+For this capstone, the design implication is to evaluate the complete extraction
+pipeline. A recognizer may read interface text correctly but still produce an
+incorrect student roster if controls or role labels are included. This is our
+application-specific inference, not a result reported by Smith. Trials should
+therefore distinguish missed name regions, character errors, and unwanted
+interface text, and compare an uncropped panel with a name-region crop.
+
+\subsection{Neural Sequence Recognition}
+Shi, Bai, and Yao propose an architecture combining feature extraction, sequence
+modeling, and transcription for scene-text recognition~\cite{shi2015crnn}.
+Their approach handles variable-length sequences without explicit character
+segmentation and supports recognition without a predefined lexicon. The cited
+version is the authors' 2015 arXiv preprint; its evaluations concern scene-text
+benchmarks rather than Zoom participant lists.
+
+This motivates testing names of different lengths and spellings instead of
+assuming a fixed dictionary will cover a roster. It does not justify automatically
+replacing an unfamiliar name with a common word. Human review remains necessary.
+Training a new recognition model is outside this project's initial scope; this
+research informs evaluation of existing tools.
+
+\subsection{Practical OCR Systems}
+Du et al. describe PP-OCR, a lightweight system with text detection, direction
+classification, and recognition components~\cite{du2020ppocr}. Their work studies
+model capability and size through optimization strategies and ablation experiments.
+The cited source is a 2020 arXiv preprint and describes that version of PP-OCR,
+not every later PaddleOCR release.
+
+The relevant lesson for this project is to consider processing cost alongside
+recognition quality. We will record time to produce a reviewable roster and
+manual correction effort, rather than select a tool solely by an unrelated
+benchmark score. A Zoom panel has a narrower layout than the broader text-image
+settings addressed by this research; local experiments remain necessary.
+
+\subsection{Connecting OCR to JavaScript Automation}
+Tesseract.js provides a JavaScript interface to a WebAssembly port of Tesseract
+for browsers and Node.js~\cite{tesseractJs}. This is primary software documentation,
+not a peer-reviewed accuracy study. It offers a candidate scripting route:
+test recognition in the browser-based sidebar and pass extracted text to the
+Apps Script workflow. Compatibility, model loading, worker behavior, and latency
+must be demonstrated in the actual sidebar before adopting this approach.
+
+Browser or Node.js support does not imply compatibility with server-side
+\texttt{Code.gs}; Apps Script's runtime differs from both~\cite{googleAppsScriptV8}.
+An alternative architecture is to upload the image for server-orchestrated OCR.
+M2 will compare feasible integration paths, including permissions, storage,
+cleanup, and any service cost. No engine or deployment path is selected by this
+literature review.
+
+\subsection{Research Questions for the Technology Trial}
+\begin{enumerate}
+\item Does cropping to the name region reduce unwanted interface text without
+losing student entries?
+\item How do readable screenshot scale, name length, and duplicate display names
+affect extraction errors and human correction effort?
+\item Which feasible scripting integration produces a correctable roster with
+acceptable latency and manageable authorization and data handling?
+\end{enumerate}
+These questions translate the literature into project-specific experiments.
+They are proposed comparisons, not claims of published or measured improvements.
+

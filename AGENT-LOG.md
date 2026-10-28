@@ -160,6 +160,41 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   verified. Browser rendering not tested: browser automation is unavailable.
 - Delivery and feedback remain pending; no application demo results claimed.
 
+## 2026-10-28: Develop the Proposal Paper (Issue #19)
+
+- Owner reported a successful proposal presentation and feedback to develop
+  the paper incrementally and organize it across multiple pages.
+- Codex work: expanded the LaTeX proposal into a structured development report,
+  added verified Google references and an ongoing documentation plan.
+- Human review: presentation outcome and feedback supplied by the owner;
+  actual delivery date and demonstrated commit not inferred.
+- Checks: whitespace, balanced LaTeX environments, bibliography keys, explicit
+  page divisions, and removal of placeholder sections verified. LaTeX tools
+  are not installed locally, so PDF compilation and visual pagination are unverified.
+- Limitations: no implementation, OCR performance, or runtime results claimed.
+
+## 2026-10-28: OCR Research for the Paper (Issue #19)
+
+- Request: add research supporting OCR and its scripting integration.
+- Codex work: consulted primary Tesseract, CRNN, and PP-OCR publications and
+  Tesseract.js documentation; added related work, bibliography entries, and
+  research-driven trial questions. Preprints and software docs are identified.
+- Checks: six unique bibliography keys, resolved citations, balanced LaTeX
+  environments, and whitespace verified; no engine selected or tested.
+- Human acceptance: pending review of the expanded paper.
+- Limits: published results are not evidence of performance on Zoom screenshots;
+  PDF compilation remains unavailable without a LaTeX toolchain.
+
+## 2026-10-28: Modular Paper Source (Issue #19)
+
+- Request: organize the growing paper into smaller LaTeX files.
+- Codex work: extracted ten topic files under paper/sections, retaining main.tex
+  as the entry point, and documented editing and compilation in paper/README.md.
+- Checks: expanding all input directives exactly reproduced the original source,
+  preserving prose, citations, section order, and explicit page breaks.
+- Limits: PDF compilation remains unverified because no LaTeX toolchain is installed.
+- Human acceptance: pending review.
+
 ## Entry Template
 
 - Date and task/issue:

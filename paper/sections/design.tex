@@ -1,0 +1,26 @@
+\section{Proposed Design}
+\subsection{User Workflow}
+\begin{enumerate}
+\item Open a custom menu in the control spreadsheet and display the sidebar.
+\item Select a local Zoom Participants screenshot and validate the upload.
+\item Extract visible names, excluding interface controls and role/self labels.
+\item Review and correct the roster in a staging tab, then explicitly approve it.
+\item Create the separate roster spreadsheet and copy the template for each entry.
+\item Write each responder link and completion status to its corresponding row.
+\end{enumerate}
+
+\subsection{Components and Recovery}
+Planned source files include \texttt{Code.gs} for server operations,
+\texttt{Sidebar.html} for the upload interface, and \texttt{appsscript.json}
+for configuration. These are planned components, not implemented modules.
+Persistent run records should associate a run identifier and stable entry
+identifier with the name, form identifier, responder URL, and processing status.
+Names alone cannot be keys because two students may share the same display name.
+
+A failed request after copying a form but before recording its identifier can
+cause a duplicate on retry. The implementation must reconcile existing resources
+before repeating creation; a local success flag alone is insufficient. The
+storage mechanism and reconciliation method will be selected and tested in M2.
+Upload limits, authorization scopes, execution limits, and OCR selection are
+also open technical decisions.
+
