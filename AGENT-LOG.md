@@ -185,6 +185,16 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limits: published results are not evidence of performance on Zoom screenshots;
   PDF compilation remains unavailable without a LaTeX toolchain.
 
+## 2026-10-28: Modular Paper Source (Issue #19)
+
+- Request: organize the growing paper into smaller LaTeX files.
+- Codex work: extracted ten topic files under paper/sections, retaining main.tex
+  as the entry point, and documented editing and compilation in paper/README.md.
+- Checks: expanding all input directives exactly reproduced the original source,
+  preserving prose, citations, section order, and explicit page breaks.
+- Limits: PDF compilation remains unverified because no LaTeX toolchain is installed.
+- Human acceptance: pending review.
+
 ## Entry Template
 
 - Date and task/issue:

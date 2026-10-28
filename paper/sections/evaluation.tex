@@ -1,0 +1,36 @@
+\section{Evaluation Method}
+\subsection{Fixtures and Measurements}
+Use a Participants panel sample containing fictional names, including duplicate
+display names. Target 20 visible entries only if they remain legible in one
+screenshot; otherwise record the actual visible count. Maintain an independently
+checked expected roster. Compare raw OCR with that roster before correction,
+reporting exact-name matches, missing and extra entries, and the number of manual
+corrections. No accuracy threshold is claimed before an initial OCR trial.
+
+For the comparisons motivated by the literature, keep the expected roster fixed
+and vary one input condition at a time, such as cropping or readable image scale.
+Preserve duplicate entries when matching outputs to expected rows. Record engine
+and model versions, language settings, preprocessing, and browser or service
+configuration. Separate initial model-loading time from subsequent recognition
+time when relevant. Report each tested condition and failure rather than
+generalizing from the best sample to all participant screenshots.
+
+After review, let $N$ denote the number of approved entries. Require exactly
+$N$ distinct forms and $N$ correct name-to-link mappings. Check copied questions
+against the template and submit fictional responses to verify that each response
+appears only in its corresponding form. Test responder access using a
+representative intended respondent rather than relying on the owner's editor view.
+
+\subsection{Failure Scenarios and Reproducibility}
+Test missing, invalid, empty, and oversized uploads; cancellation; duplicate
+names; and partial service failures. Interrupt runs after spreadsheet creation,
+form copying, state saving, and row updates. Resuming the same run must complete
+remaining work without creating additional forms. Record cleanup outcomes for
+temporary OCR resources in both successful and failed runs.
+
+For each evaluation, record the source commit, account configuration, template
+settings, fixture identifier, approved entry count, commands or UI steps, and
+actual outputs. Measure total runtime and report limitations. If time savings
+are evaluated, compare manual and automated workflows on the same fixture,
+including human correction time; do not infer savings from successful execution.
+
