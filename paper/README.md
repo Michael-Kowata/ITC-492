@@ -2,7 +2,9 @@
 
 `main.tex` is the write-up; `references.bib` holds verified sources. Match
 citation keys to the wiki Reading page when recording new reading notes. The
-bibliography currently cites Google's V8 and HTML-service documentation.
+bibliography includes Google's platform documentation, Smith's Tesseract paper,
+the CRNN and PP-OCR preprints, and Tesseract.js software documentation. The paper
+distinguishes research findings from implementation guidance and project inferences.
 
 The paper is a living proposal and development report, with a title page,
 contents page, numbered sections, references, and an appendix. Update design

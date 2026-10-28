@@ -173,6 +173,18 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   are not installed locally, so PDF compilation and visual pagination are unverified.
 - Limitations: no implementation, OCR performance, or runtime results claimed.
 
+## 2026-10-28: OCR Research for the Paper (Issue #19)
+
+- Request: add research supporting OCR and its scripting integration.
+- Codex work: consulted primary Tesseract, CRNN, and PP-OCR publications and
+  Tesseract.js documentation; added related work, bibliography entries, and
+  research-driven trial questions. Preprints and software docs are identified.
+- Checks: six unique bibliography keys, resolved citations, balanced LaTeX
+  environments, and whitespace verified; no engine selected or tested.
+- Human acceptance: pending review of the expanded paper.
+- Limits: published results are not evidence of performance on Zoom screenshots;
+  PDF compilation remains unavailable without a LaTeX toolchain.
+
 ## Entry Template
 
 - Date and task/issue:
