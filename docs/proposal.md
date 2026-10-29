@@ -47,8 +47,8 @@ and checks recorded in AGENT-LOG.md. Advisor approval is not yet recorded.
 ## Schedule and Risks
 
 Follow the [revised project milestones](milestones.md). M1 completed October 28;
-M2-M7 are planned from October 29, 2026 through January 20, 2027. The owner
-authorized development beyond the original semester; course deadlines require
+M2-M7 are planned from October 29 through December 7, 2026, the owner's confirmed
+final delivery deadline. Other course requirements and presentation dates require
 separate confirmation. Authentication and form-copy behavior must be proven
 in M2; OCR errors are handled through mandatory roster review. Test with synthetic
 names and keep private inputs and credentials out of version control.

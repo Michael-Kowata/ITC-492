@@ -220,6 +220,18 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 
 ## Entry Template
 
+## 2026-10-28: Confirm December 7 Final Delivery
+
+- Owner clarified final delivery as December 7, 2026, superseding the January target.
+- Revised M2-M6 to one-week windows and M7 to December 3-7; retained M1 completion
+  and all previous dates in schedule history. Updated the project and paper text.
+- Completed publication October 29: repository and Wiki timelines synchronized;
+  six contiguous planning windows and GitHub dates verified through December 7.
+- Limitations: dates are planning targets; no future work or presentation date
+  is represented as completed or confirmed by this change.
+
+## Entry Template
+
 - Date and task/issue:
 - Codex work and affected files:
 - Codex checks and actual outcomes:

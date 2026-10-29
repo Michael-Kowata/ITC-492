@@ -2,7 +2,8 @@
 
 ## Revised Baseline: October 28, 2026
 
-The project owner authorized development beyond November 29. The original
+The project owner confirmed **December 7, 2026** as the final delivery date,
+superseding the earlier January 20, 2027 planning target. The original
 14-week semester (August 24-November 29, 2026) remains historical context,
 not the current development schedule. This revision does not establish an
 instructor-approved extension or change course submission requirements.
@@ -12,19 +13,21 @@ GitHub records repository creation on September 14, 2026 in America/Los_Angeles
 not a claim that application code existed then. Earlier research and tool setup
 remain in the retrospective semester logs. M1 was completed October 28.
 
-Remaining milestones use sequential two-week planning windows, retaining the
-original allocation per milestone. Dates are targets, not completion claims.
-Holiday availability, especially during M6, should be reviewed as work proceeds.
+Remaining milestones use roughly one-week planning windows, with December 3-7
+reserved for final delivery. Dates are targets, not completion claims. This is
+a compressed plan: develop the paper alongside implementation and review OCR
+feasibility in M2 before expanding scope. Holiday availability during M6 needs
+attention; any scope or date changes must be recorded explicitly.
 
 | ID | Milestone | Start | Current End / Due | Status |
 | --- | --- | --- | --- | --- |
 | M1 | Scope and project foundation | 2026-09-14 | 2026-10-28 | Completed; actual end |
-| M2 | Design and technology trials | 2026-10-29 | 2026-11-11 | Planned |
-| M3 | Screenshot extraction and review | 2026-11-12 | 2026-11-25 | Planned |
-| M4 | Sheet and individual form creation | 2026-11-26 | 2026-12-09 | Planned |
-| M5 | Link matching and recovery | 2026-12-10 | 2026-12-23 | Planned |
-| M6 | Evaluation and documentation | 2026-12-24 | 2027-01-06 | Planned |
-| M7 | Final delivery | 2027-01-07 | 2027-01-20 | Planned |
+| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | Planned |
+| M3 | Screenshot extraction and review | 2026-11-05 | 2026-11-11 | Planned |
+| M4 | Sheet and individual form creation | 2026-11-12 | 2026-11-18 | Planned |
+| M5 | Link matching and recovery | 2026-11-19 | 2026-11-25 | Planned |
+| M6 | Evaluation and documentation | 2026-11-26 | 2026-12-02 | Planned |
+| M7 | Final delivery | 2026-12-03 | 2026-12-07 | Planned |
 
 M1's current date reflects actual completion retrospectively; it is not a claim
 that its original deadline was met. M2 trials cover Apps Script sidebar upload,
@@ -34,7 +37,7 @@ with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
 ## Change History
 
-| Recorded | Milestone | Original Due | Revised Due | Reason |
+| Recorded | Milestone | Previous Due | Revised Due | Reason |
 | --- | --- | --- | --- | --- |
 | 2026-10-28 | M1 | 2026-09-06 | 2026-10-28 | Actual foundation completion recorded |
 | 2026-10-28 | M2 | 2026-09-20 | 2026-11-11 | Replanned after M1; owner permits development beyond semester |
@@ -43,6 +46,12 @@ with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 | 2026-10-28 | M5 | 2026-11-01 | 2026-12-23 | Replanned after M1; owner permits development beyond semester |
 | 2026-10-28 | M6 | 2026-11-15 | 2027-01-06 | Replanned after M1; owner permits development beyond semester |
 | 2026-10-28 | M7 | 2026-11-29 | 2027-01-20 | Replanned after M1; owner permits development beyond semester |
+| 2026-10-28 | M2 | 2026-11-11 | 2026-11-04 | Subsequent owner clarification: final delivery December 7 |
+| 2026-10-28 | M3 | 2026-11-25 | 2026-11-11 | Subsequent owner clarification: final delivery December 7 |
+| 2026-10-28 | M4 | 2026-12-09 | 2026-11-18 | Subsequent owner clarification: final delivery December 7 |
+| 2026-10-28 | M5 | 2026-12-23 | 2026-11-25 | Subsequent owner clarification: final delivery December 7 |
+| 2026-10-28 | M6 | 2027-01-06 | 2026-12-02 | Subsequent owner clarification: final delivery December 7 |
+| 2026-10-28 | M7 | 2027-01-20 | 2026-12-07 | Owner-confirmed final delivery deadline |
 
 Keep future date changes here and update the corresponding GitHub milestone.
 Do not rewrite historical weekly reports to imply work occurred on different dates.

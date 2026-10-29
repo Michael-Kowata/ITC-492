@@ -42,7 +42,7 @@ application, and response aggregation are outside the initial scope.
 
 - Repository structure: scaffolded; application implementation has not started.
 - GitHub issues and milestones: published; update task status and due dates on GitHub.
-- Development timeline: foundation work from September 14, 2026; M1 completed October 28. M2-M7 targets run October 29, 2026-January 20, 2027.
+- Development timeline: foundation work from September 14, 2026; M1 completed October 28. M2-M7 run October 29-December 7, 2026, with final delivery on December 7.
 - Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
 - M1: completed October 28, 2026; scope, foundation, tracking, and proposal presentation recorded. M2 technology trials are next.
 - Weekly reports: week 4 records project setup and the scope change.
