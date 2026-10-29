@@ -15,6 +15,10 @@ independent copy of an existing Google Form for every approved roster entry.
 
 ## Initial Scope
 
+Participants are non-traditional learners taking a course toward OSHA
+certification. Respondents need a Google account, but not a school-issued
+account. The project does not issue certifications or verify eligibility.
+
 - One operator, one Google account, one form template, and one roster per run.
 - Configure the template Form link and destination Drive folder link before upload.
 - Store student form copies in that folder; proposed default is to store the

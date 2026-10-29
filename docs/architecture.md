@@ -65,14 +65,17 @@ its title. Its own responder link is written beside the approved name. Keep form
 IDs/edit links in operator records, not in the student-facing link column.
 
 Publication, accepting responses, and responder permissions must be validated
-for the selected Google account and intended audience in #9. School-account
-versus anyone-with-link access is configurable pending an owner decision.
+for the selected Google account and intended audience in #9. The audience is
+non-traditional learners taking an OSHA certification course. Require Google
+sign-in while allowing personal accounts without a school-domain restriction.
 Never silently widen access when the selected policy fails. The roster and
 destination folder are not automatically made public: responder access does
 not require granting students editing access to the forms or folder.
 Link distribution remains through the operator's existing class workflow;
 email automation is outside scope. Verify access using an intended respondent,
-not only the owner/editor account. No access test has yet been performed.
+not only the owner/editor account. Test an external personal account and verify
+signed-out users must sign in. Report account/template restrictions that prevent
+this policy. No access test has yet been performed.
 
 ## Recovery and Data Handling
 

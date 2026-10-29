@@ -47,6 +47,9 @@ These are planned checks, not completed results.
 - JavaScript in Google Apps Script V8, bound to a control spreadsheet; server logic in `Code.gs` and sidebar UI in `Sidebar.html`.
 - Users select a local image from Downloads or another folder; no manual Drive upload or Drive link is required.
 - One authenticated Google account that can access the template and create resources.
+- Respondents are OSHA-course learners: require Google sign-in, accept personal
+  accounts, and do not restrict responses to a school domain. Validate with an
+  external personal account and a signed-out session in M2.
 - No automatic public sharing, email distribution, or identity enforcement.
 - An individual form is not proof of the respondent's identity; access settings
   need to be tested with the intended audience.

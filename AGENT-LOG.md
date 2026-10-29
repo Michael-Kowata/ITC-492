@@ -231,6 +231,13 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   balance passed. PDF compilation and Google integration untested. Issue #8
   remains in progress pending design review and technology trials.
 
+## 2026-10-29: Clarify Respondent Audience
+
+- Owner clarified participants are OSHA-course learners who may use any Google
+  account, not necessarily a school account. Recorded Google sign-in with no
+  school-domain restriction and personal-account access tests for M2.
+- Updated design, requirements, proposal, and paper; no access test claimed.
+
 ## Entry Template
 
 ## 2026-10-28: Confirm December 7 Final Delivery
