@@ -218,6 +218,19 @@ the reviewer after they occur; Codex must not mark its own work accepted.
 - Limitations: planning estimates are not course deadline extensions; no future
   work is represented as complete.
 
+## 2026-10-29: M2 Workflow Design (Issue #8)
+
+- Owner specified a template Form link and destination Drive folder link before
+  screenshot upload, OCR, individual form creation, and student access.
+- Codex work: documented resource validation, retained name approval, proposed
+  run/entry fields and retry states, and separated copying from respondent access.
+  Updated requirements and paper with the same design.
+- Proposed default: output roster uses the same folder; access audience remains
+  configurable pending clarification. No Google resources created or tested.
+- Checks: whitespace, changed local documentation links, and LaTeX environment
+  balance passed. PDF compilation and Google integration untested. Issue #8
+  remains in progress pending design review and technology trials.
+
 ## Entry Template
 
 ## 2026-10-28: Confirm December 7 Final Delivery

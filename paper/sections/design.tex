@@ -2,10 +2,14 @@
 \subsection{User Workflow}
 \begin{enumerate}
 \item Open a custom menu in the control spreadsheet and display the sidebar.
+\item Supply the template Form owner/editor link and destination Drive folder
+link. Resolve and confirm both resources and verify required permissions.
 \item Select a local Zoom Participants screenshot and validate the upload.
 \item Extract visible names, excluding interface controls and role/self labels.
 \item Review and correct the roster in a staging tab, then explicitly approve it.
 \item Create the separate roster spreadsheet and copy the template for each entry.
+\item Prepare each copy for the selected respondent audience and verify access;
+copying a file alone is not evidence that students can submit responses.
 \item Write each responder link and completion status to its corresponding row.
 \end{enumerate}
 
@@ -23,3 +27,18 @@ before repeating creation; a local success flag alone is insufficient. The
 storage mechanism and reconciliation method will be selected and tested in M2.
 Upload limits, authorization scopes, execution limits, and OCR selection are
 also open technical decisions.
+
+\subsection{Configuration and Student Access}
+The template and destination folder are the two required configuration inputs.
+The proposed default places both form copies and the output roster in the
+destination folder. Each approved run retains a snapshot of the resolved resource
+identifiers and access policy so retries do not use changed sidebar settings.
+The original template remains unchanged.
+
+The design distinguishes form creation, publication/response settings, and
+verified respondent access. Whether respondents need school accounts or can use
+an unrestricted responder link remains configurable pending an owner decision.
+The system must not silently broaden access after a permissions failure. Neither
+the folder nor the roster is automatically made public. Operator distribution
+of responder links remains separate from creation; automated email is out of scope.
+M2 must validate these behaviors with an intended respondent account.

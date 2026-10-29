@@ -7,7 +7,8 @@ upload. Sample validation belongs to M2; advisor approval is not claimed.
 
 ## Workflow
 
-Sheets sidebar upload -> OCR -> staging-tab review and approval -> create separate roster
+Configure template Form and destination folder -> validate resources -> sidebar
+upload -> OCR -> staging-tab review and approval -> create separate roster
 Sheet -> copy template per student -> write each matching responder link.
 
 | ID | Requirement | Acceptance evidence | Task |
@@ -22,6 +23,11 @@ Sheet -> copy template per student -> write each matching responder link.
 | R08 | Resume without extra resources | Interrupt after Sheet creation, form copy, state save, and row update; retry finds existing resources and completes remaining work | T12 |
 | R09 | Report partial failures | Failed entries have an actionable status; successful entries and resource IDs remain recoverable | T12 |
 | R10 | Protect private working data | Local private artifacts use ignored directories; cloud data access and cleanup are documented; committed fixtures use synthetic names | T06, T14 |
+| R11 | Configure template Form and destination folder links | Resolve and confirm resource names and IDs; reject invalid types or inadequate access before processing; snapshot configuration per run | T04, T05, T10 |
+| R12 | Prepare copied forms for the intended respondents | Validate publication/response settings and chosen access policy; report failures without silently broadening access; no automatic public sharing of roster or folder | T05, T10, T11 |
+
+See [workflow design](architecture.md) for the proposed record fields, resource
+validation, publication steps, and failure recovery.
 
 ## Evaluation Baseline
 
