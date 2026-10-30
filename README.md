@@ -15,8 +15,10 @@ responder link. Implementation has not started.
    the student's name in its title and independent responses.
 5. Write the matching responder link beside each name.
 
-The initial version targets one roster layout, one template, and one Google
-account. A shared form with prefilled links does not meet the requirement.
+The initial version targets one roster layout and one template per run. Multiple
+instructors use independent control-spreadsheet copies and their own Google
+accounts. A guided sidebar supports non-technical users without source edits.
+A shared form with prefilled links does not meet the requirement.
 Duplicate names remain separate roster entries. Interrupted runs must resume
 without creating duplicate forms. Public roster sharing, email delivery, a standalone web
 application, and response aggregation are outside the initial scope.

@@ -2,12 +2,30 @@
 \subsection{User Workflow}
 \begin{enumerate}
 \item Open a custom menu in the control spreadsheet and display the sidebar.
+\item Supply the template Form owner/editor link and destination Drive folder
+link. Resolve and confirm both resources and verify required permissions.
 \item Select a local Zoom Participants screenshot and validate the upload.
 \item Extract visible names, excluding interface controls and role/self labels.
 \item Review and correct the roster in a staging tab, then explicitly approve it.
 \item Create the separate roster spreadsheet and copy the template for each entry.
+\item Prepare each copy for the selected respondent audience and verify access;
+copying a file alone is not evidence that students can submit responses.
 \item Write each responder link and completion status to its corresponding row.
 \end{enumerate}
+
+\subsection{Guided Instructor Interface}
+A reusable control-spreadsheet template will provide a sidebar guiding instructors
+through setup, upload, review, generation, and results. Setup resolves the two
+resource links to recognizable names and preserves editable settings. The review
+step shows the approved roster count before explicit confirmation. Generation
+shows progress and per-entry status; completion exposes the output roster link
+and actionable recovery for failed entries. Routine use requires no source-code
+changes. Labeled controls, keyboard access, and textual status are design requirements.
+
+Each instructor uses a separate copy with independently scoped configuration and
+run state. The distribution template must contain no previous roster or private
+run data. M2 will validate copying, first-use authorization, and storage isolation.
+These are proposed interaction and deployment choices, not a completed interface.
 
 \subsection{Components and Recovery}
 Planned source files include \texttt{Code.gs} for server operations,
@@ -23,3 +41,19 @@ before repeating creation; a local success flag alone is insufficient. The
 storage mechanism and reconciliation method will be selected and tested in M2.
 Upload limits, authorization scopes, execution limits, and OCR selection are
 also open technical decisions.
+
+\subsection{Configuration and Student Access}
+The template and destination folder are the two required configuration inputs.
+The proposed default places both form copies and the output roster in the
+destination folder. Each approved run retains a snapshot of the resolved resource
+identifiers and access policy so retries do not use changed sidebar settings.
+The original template remains unchanged.
+
+The design distinguishes form creation, publication/response settings, and
+verified respondent access. Respondents are non-traditional OSHA-course learners;
+the intended policy requires Google sign-in but permits personal accounts without
+a school-domain restriction, as confirmed by the project owner.
+The system must not silently broaden access after a permissions failure. Neither
+the folder nor the roster is automatically made public. Operator distribution
+of responder links remains separate from creation; automated email is out of scope.
+M2 must validate these behaviors with an intended respondent account.
