@@ -238,6 +238,18 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   school-domain restriction and personal-account access tests for M2.
 - Updated design, requirements, proposal, and paper; no access test claimed.
 
+## 2026-10-30: Non-Technical Instructor Interface (Issue #8)
+
+- Owner approved a user-friendly interface for instructors beyond the developer.
+- Updated scope, guided interaction design, R13-R15, and paper introduction,
+  design, requirements, and evaluation. Independent spreadsheet copies are the
+  initial model; shared simultaneous operation remains deferred.
+- Added formative usability and copy-isolation checks; no usability or runtime
+  results claimed. Updated six GitHub tasks and published Wiki design notes.
+- Checks: whitespace and LaTeX environment balance passed; corrected the source
+  check to recognize zero-padded IDs, then verified R01-R15 once in order.
+  PDF compilation remains unavailable without a LaTeX toolchain.
+
 ## Entry Template
 
 ## 2026-10-28: Confirm December 7 Final Delivery

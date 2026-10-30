@@ -25,11 +25,18 @@ Sheet -> copy template per student -> write each matching responder link.
 | R10 | Protect private working data | Local private artifacts use ignored directories; cloud data access and cleanup are documented; committed fixtures use synthetic names | T06, T14 |
 | R11 | Configure template Form and destination folder links | Resolve and confirm resource names and IDs; reject invalid types or inadequate access before processing; snapshot configuration per run | T04, T05, T10 |
 | R12 | Prepare copied forms for the intended respondents | Validate publication/response settings and chosen access policy; report failures without silently broadening access; no automatic public sharing of roster or folder | T05, T10, T11 |
+| R13 | Provide a guided interface for non-technical instructors | Setup, upload, review, approval, progress, and results can be completed without source edits or internal IDs; resolved resource names and approved count are shown | T04, T06, T08 |
+| R14 | Support independent instructor copies | Two separately configured copies use only their own run records and selected resources; copied templates contain no prior roster, private configuration, or credentials | T04, T06, T14 |
+| R15 | Provide usable feedback and recovery | Keyboard-accessible labeled controls, textual status, actionable errors, and retry of failed entries without duplicate creation; observe at least one non-technical instructor completing the representative workflow without developer intervention | T08, T12, T13 |
 
 See [workflow design](architecture.md) for the proposed record fields, resource
 validation, publication steps, and failure recovery.
 
 ## Evaluation Baseline
+
+Usability is a core acceptance criterion. In addition to technical checks,
+observe a non-technical instructor completing the workflow using brief written
+instructions without developer assistance; record failures and requested help.
 
 Use a fictional-name Participants panel sample with two identical display names.
 Target 20 names if they fit legibly; otherwise record the actual visible count.
@@ -43,6 +50,9 @@ runtime and the account, template settings, OS, versions, and commit used.
 These are planned checks, not completed results.
 
 ## Constraints and Open Decisions
+
+- Multiple instructors use separate copies of the control spreadsheet, with
+  independent configuration and run records. Shared simultaneous operation is deferred.
 
 - JavaScript in Google Apps Script V8, bound to a control spreadsheet; server logic in `Code.gs` and sidebar UI in `Sidebar.html`.
 - Users select a local image from Downloads or another folder; no manual Drive upload or Drive link is required.

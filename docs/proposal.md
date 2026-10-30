@@ -19,7 +19,12 @@ Participants are non-traditional learners taking a course toward OSHA
 certification. Respondents need a Google account, but not a school-issued
 account. The project does not issue certifications or verify eligibility.
 
-- One operator, one Google account, one form template, and one roster per run.
+- Multiple instructors use independent copies of a reusable control spreadsheet.
+  Each copy uses its operator's Google account, settings, and run records.
+- One operator, one form template, and one roster per run; simultaneous shared
+  operation within one control spreadsheet is outside the initial scope.
+- A guided sidebar supports setup, upload, review, generation, and results.
+  Routine users must not edit source code or supply internal resource IDs.
 - Configure the template Form link and destination Drive folder link before upload.
 - Store student form copies in that folder; proposed default is to store the
   output roster there too. Validate intended respondent access before reporting success.

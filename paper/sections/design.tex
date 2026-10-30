@@ -13,6 +13,20 @@ copying a file alone is not evidence that students can submit responses.
 \item Write each responder link and completion status to its corresponding row.
 \end{enumerate}
 
+\subsection{Guided Instructor Interface}
+A reusable control-spreadsheet template will provide a sidebar guiding instructors
+through setup, upload, review, generation, and results. Setup resolves the two
+resource links to recognizable names and preserves editable settings. The review
+step shows the approved roster count before explicit confirmation. Generation
+shows progress and per-entry status; completion exposes the output roster link
+and actionable recovery for failed entries. Routine use requires no source-code
+changes. Labeled controls, keyboard access, and textual status are design requirements.
+
+Each instructor uses a separate copy with independently scoped configuration and
+run state. The distribution template must contain no previous roster or private
+run data. M2 will validate copying, first-use authorization, and storage isolation.
+These are proposed interaction and deployment choices, not a completed interface.
+
 \subsection{Components and Recovery}
 Planned source files include \texttt{Code.gs} for server operations,
 \texttt{Sidebar.html} for the upload interface, and \texttt{appsscript.json}

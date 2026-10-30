@@ -3,7 +3,38 @@
 Issue: [#8](https://github.com/Michael-Kowata/ITC-492/issues/8).
 Status: proposed design; runtime behavior must be validated in M2.
 
-## Configuration Before Upload
+## Intended Users and Guided Interface
+
+The tool supports multiple non-technical instructors, each using an independent
+copy of a reusable control spreadsheet. This is not a shared concurrent dashboard.
+Routine users do not edit Code.gs, paste internal IDs, or configure developer tools.
+Deployment and source synchronization remain maintainer responsibilities.
+
+| Step | User action | Required feedback |
+| --- | --- | --- |
+| Setup | Enter template Form and folder links; complete first-use authorization | Show resolved names, actionable access errors, and saved settings |
+| Upload | Select a screenshot | Show filename, validation errors, and processing status |
+| Review | Correct the staging roster and remove non-students | Show approved count; let users return to review before generation |
+| Generate | Confirm creation explicitly | Show processed/total count and per-entry status; prevent duplicate submissions |
+| Finish | Open the output roster or retry failed entries | Show result link, partial failures, and a recovery action |
+
+Use descriptive labels, logical keyboard focus, and status text rather than color
+alone. Keep errors specific to the action the instructor can take, such as checking
+folder access; keep sensitive technical details out of ordinary error messages.
+Saved settings remain editable and are revalidated before a new run. Setup guidance
+must cover copying the control spreadsheet and granting required permissions.
+
+Configuration and run state must be scoped to each control spreadsheet and its
+operator. Copying the distribution template must not carry prior names, output
+links, credentials, or run state. M2 must verify the chosen storage and copying
+behavior with two independent copies. An instructor can intentionally select a
+shared destination folder, but one copy must not resume or change another's run.
+
+M2 will review a lightweight interface walkthrough and validate first-use setup;
+later implementation must undergo the usability evaluation specified in R15.
+No interface or usability test is claimed implemented yet.
+
+## Template and Folder Configuration
 
 The operator supplies two links in the control spreadsheet's sidebar:
 
