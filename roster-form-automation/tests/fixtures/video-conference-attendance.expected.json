@@ -1,0 +1,36 @@
+{
+  "image": "Zoom Screenshot Sample.png",
+  "referenceType": "Manual transcription, not OCR output",
+  "rows": [
+    "Jordan Wells IT Support (Host, me)",
+    "Morgan Reed - Instructor (Co-host)",
+    "Taylor Brooks",
+    "Casey Monroe",
+    "Riley Carter - IP",
+    "Avery Thompson",
+    "Jamie Prescott",
+    "Parker Ellis",
+    "Quinn Harmon - IP",
+    "Sydney Caldwell",
+    "Drew Sullivan",
+    "Harper Vaughn",
+    "Cameron Blake",
+    "Reese Mitchell",
+    "Logan Bennett",
+    "Elliot Graham",
+    "Peyton Wallace",
+    "Rowan Daniels",
+    "Finley Morgan"
+  ],
+  "rosterPolicy": {
+    "excludedSourceRows": [1, 2],
+    "exclusionReason": "Owner identified IT Support and Instructor as non-students",
+    "inPersonSuffix": "- IP",
+    "preserveSuffix": true,
+    "ordering": "In-person first; preserve screenshot order within each group",
+    "approvedStudentCount": 17,
+    "inPersonCount": 2,
+    "onlineCount": 15
+  },
+  "expectedStudentSourceRows": [5, 9, 3, 4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+}

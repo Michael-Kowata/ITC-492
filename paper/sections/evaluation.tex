@@ -1,5 +1,18 @@
 \section{Evaluation Method}
 \subsection{Fixtures and Measurements}
+The first prepared image is a real Zoom capture with names replaced using AI
+and avatars cropped out. Its native dimensions are 172 by 612 pixels, with
+19 visible display rows. A manual transcription preserves the full display text
+for OCR comparison. A separate roster policy excludes two staff entries and
+orders the remaining 17 students with the two in-person entries first.
+Extraction accuracy is evaluated against all 19 display rows; filtering and
+ordering are evaluated separately against the 17-student reference. The small
+text and AI editing limit representativeness. The Results section reports the
+first owner-supplied OCR output comparison; broader evaluation remains pending.
+
+This image has no duplicate names. The existing duplicate-name JSON fixture
+can test roster logic but does not replace a duplicate-name image for OCR tests.
+
 Use a Participants panel sample containing fictional names, including duplicate
 display names. Target 20 visible entries only if they remain legible in one
 screenshot; otherwise record the actual visible count. Maintain an independently

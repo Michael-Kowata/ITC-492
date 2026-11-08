@@ -2,9 +2,13 @@
 /data/
 /secrets/
 /runs/
+# AI-edited capture awaits avatar and metadata privacy review.
+/roster-form-automation/tests/fixtures/Video conference attendance list.png
 .env
 .env.*
 !.env.example
+.clasprc.json
+.clasp.json
 
 # Python development artifacts.
 __pycache__/

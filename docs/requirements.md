@@ -32,6 +32,25 @@ Sheet -> copy template per student -> write each matching responder link.
 See [workflow design](architecture.md) for the proposed record fields, resource
 validation, publication steps, and failure recovery.
 
+## Attendance and Administration Policy
+
+Exclude IT Support and Instructor entries from Form creation; the instructor
+confirms exclusions during review. Do not treat every host/co-host as a
+non-student solely because of their Zoom role.
+
+Preserve the `- IP` suffix in approved names, roster rows, and Form titles: it
+denotes in-person attendance. Entries without it are treated as online under
+the current naming convention, subject to instructor correction during review.
+Create and list in-person entries first, preserving screenshot order within
+each group as the baseline ordering. Keep stable entry IDs when reordering.
+The instructor administers the in-person tests first through the existing
+link-distribution workflow. Creation order alone does not prevent online
+students from responding; automatic timed release/access gating is not included.
+
+Acceptance: the current 19-row fixture yields 17 student Forms, with Riley
+Carter - IP and Quinn Harmon - IP first, suffixes intact, and no IT Support or
+Instructor Form. These are expected outcomes, not implemented/tested results.
+
 ## Evaluation Baseline
 
 Usability is a core acceptance criterion. In addition to technical checks,

@@ -3,8 +3,36 @@
 The repository contains a defined scope, acceptance criteria, GitHub issue and
 milestone tracking, published Wiki pages, experiment templates, an agent log,
 and presentation artifacts. These demonstrate project preparation, not the
-correctness of the proposed automation. This draft contains no measured OCR
-accuracy, runtime, successful form-generation count, or recovery results.
+correctness of the proposed automation. One owner-supplied OCR text sample has
+been compared with the reference; runtime, successful form-generation counts,
+and recovery results remain unmeasured.
+
+On November 8, 2026, the owner reported that the sidebar setup worked and that
+valid links were accepted while invalid links were rejected. This is a limited
+owner-reported smoke check, not a complete usability or permission test.
+A privacy-reviewed, avatar-free fixture and manual reference are available:
+19 display rows and 17 expected students after staff exclusion, including two
+in-person students. These counts describe test preparation, not successful
+automated extraction. The next experiment compares raw OCR with the reference
+before testing roster filtering and attendance ordering.
+
+\subsection{Initial OCR Smoke Test}
+On November 8, 2026, the owner reported that the integrated OCR output worked
+as intended. This supports basic functionality in the tested environment but
+does not establish general recognition accuracy. The owner subsequently provided
+raw sidebar text containing 20 lines. After trimming surrounding whitespace and
+aligning rows in sequence, 18 of 19 reference display rows matched exactly
+(94.7\%). The remaining row, \texttt{Quinn Harmon - IP}, appeared as
+\texttt{Quinn Harmon - I} followed by a standalone \texttt{IP}. This is one
+incorrect row and one extra fragment, not a missing participant. The denominator
+includes staff rows; this is not a character-accuracy metric.
+
+The raw text is retained unchanged in the Cloud Vision sandbox. Exact deployed
+revision, input hash, timing, and complete API response were not supplied.
+Manual correction must reconstruct the suffix and remove the extra fragment;
+blind concatenation would leave a duplicated letter. This motivates explicit
+review before attendance classification or Form generation. No successful
+filtering or Form generation is inferred.
 
 \subsection{Presentation Feedback}
 The proposal presentation was scheduled for September 28, 2026. On October 28,
@@ -16,6 +44,10 @@ an ongoing documentation process. The actual delivery date and demonstrated
 commit have not been independently confirmed in this draft.
 
 \subsection{Limitations}
+The sidebar now includes a server-side Cloud Vision request and a raw-text
+result view. The single owner-supplied result is limited evidence; mocked
+request/error checks cannot establish Google authorization or recognition quality.
+
 Image quality, display-name ambiguity, service permissions, and execution limits
 may constrain the solution. Human review reduces the effect of extraction errors
 but introduces work that must be included in evaluation. A successful sample

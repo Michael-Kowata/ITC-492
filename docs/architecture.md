@@ -32,7 +32,8 @@ shared destination folder, but one copy must not resume or change another's run.
 
 M2 will review a lightweight interface walkthrough and validate first-use setup;
 later implementation must undergo the usability evaluation specified in R15.
-No interface or usability test is claimed implemented yet.
+The sidebar upload/OCR path is implemented and owner-tested. Guided roster
+review, generation, and representative-instructor usability testing remain pending.
 
 ## Template and Folder Configuration
 
@@ -77,6 +78,20 @@ approved roster for the run; later edits require explicit reconciliation or a
 new run rather than silently changing completed outputs.
 
 ## Run and Entry Records
+
+### Attendance Priority
+
+Review excludes the identified IT Support and Instructor entries and preserves
+the attendance suffix `- IP`. Host/co-host labels alone do not establish that
+someone is staff. Store attendance mode and original row position with the
+stable entry ID. Under the current convention, `- IP` means in-person and its
+absence means online; the operator can correct this before approval.
+
+Snapshot the approved order with in-person students first and original order
+within each group. Use that order for generation and roster display; preserve
+the suffix in names and Form titles. Retries retain the approved order and IDs.
+The operator distributes in-person links first. This priority does not itself
+restrict access to online Forms or implement scheduled release.
 
 | Record | Minimum fields | Purpose |
 | --- | --- | --- |

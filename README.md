@@ -4,7 +4,8 @@ Senior capstone project with a revised development schedule extending beyond the
 will extract student names from a roster screenshot, let the user correct them,
 create a Google Sheet, and copy a template Google Form separately for each
 student. Each roster row will contain the student's name and their own form's
-responder link. Implementation has not started.
+responder link. Sidebar upload and Cloud Vision OCR are implemented and
+owner-tested. Roster review and output generation remain unimplemented.
 
 ## Focused Scope
 
@@ -42,12 +43,12 @@ application, and response aggregation are outside the initial scope.
 
 ## Deliverable Status
 
-- Repository structure: scaffolded; application implementation has not started.
+- Application: sidebar and OCR owner-tested; one sample has 18/19 exact display-row matches, with an attendance suffix error.
 - GitHub issues and milestones: published; update task status and due dates on GitHub.
 - Development timeline: foundation work from September 14, 2026; M1 completed October 28. M2-M7 run October 29-December 7, 2026, with final delivery on December 7.
 - Wiki: all six pages published to GitHub Wiki; no duplicate local wiki files.
-- M1: completed October 28, 2026; scope, foundation, tracking, and proposal presentation recorded. M2 technology trials are next.
+- M1: completed October 28, 2026. M2 remains in progress past its November 4 target; initial M3 extraction work overlaps it.
 - Weekly reports: week 4 records project setup and the scope change.
-- Experiments, results, and presentations: templates only.
+- Evidence: OCR output and comparison in `sandbox/google-cloud-vision/observations/`; proposal presentation artifacts and living paper available.
 
 Start with [the workflow](docs/workflow.md) and [the backlog](docs/backlog.md).

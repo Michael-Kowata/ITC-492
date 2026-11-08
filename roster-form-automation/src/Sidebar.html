@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 16px; font: 14px/1.5 Arial, sans-serif; color: #202124; background: #fff; letter-spacing: 0; }
+      h1 { margin: 0 0 16px; font-size: 20px; }
+      label { display: block; margin: 16px 0 6px; font-weight: 600; }
+      input { width: 100%; min-width: 0; padding: 8px; border: 1px solid #747775; border-radius: 4px; font: inherit; }
+      input[type=file] { padding: 6px; }
+      button { margin-top: 16px; padding: 10px 14px; border: 0; border-radius: 4px; background: #146c43; color: white; font: inherit; cursor: pointer; }
+      :focus-visible { outline: 3px solid #1967d2; outline-offset: 2px; }
+      #status { overflow-wrap: anywhere; }
+      #preview { display: block; width: 100%; height: 220px; object-fit: contain; margin-top: 16px; background: #f1f3f4; }
+      #preview[hidden] { display: none; }
+      textarea { width: 100%; min-height: 220px; font: inherit; }
+      button:disabled { opacity: 0.6; cursor: wait; }
+    </style>
+  </head>
+  <body>
+    <h1>Roster setup</h1>
+    <form id="setup">
+      <label for="template">Template Form editor link</label>
+      <input id="template" type="url" required autocomplete="off" placeholder="https://docs.google.com/forms/d/.../edit">
+      <label for="folder">Destination Drive folder link</label>
+      <input id="folder" type="url" required autocomplete="off" placeholder="https://drive.google.com/drive/folders/...">
+      <label for="screenshot">Participants screenshot</label>
+      <input id="screenshot" name="screenshot" type="file" accept="image/png,image/jpeg" required>
+      <img id="preview" alt="Selected Participants screenshot" hidden>
+      <p>The selected image will be sent to Google Cloud Vision for OCR.</p>
+      <button id="extract" type="submit">Extract text</button>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="results" hidden>
+      <label for="ocrText">Raw OCR text</label>
+      <textarea id="ocrText" readonly></textarea>
+    </section>
+    <script>
+      const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
+      let previewUrl;
+      const status = document.getElementById('status');
+      const screenshot = document.getElementById('screenshot');
+      const preview = document.getElementById('preview');
+      let busy = false;
+      function finish(message) {
+        busy = false;
+        document.getElementById('extract').disabled = false;
+        status.textContent = message;
+      }
+
+      function inputError(template, folder, file) {
+        if (!/^https:\/\/docs\.google\.com\/forms\/d\/(?!e\/)[\w-]+\/edit(?:[?#].*)?$/.test(template)) {
+          return 'Enter the template Form editor link, ending in /edit.';
+        }
+        if (!/^https:\/\/drive\.google\.com\/drive\/(?:u\/\d+\/)?folders\/[\w-]+(?:[?#].*)?$/.test(folder)) {
+          return 'Enter a Google Drive folder link.';
+        }
+        if (!file || !['image/png', 'image/jpeg'].includes(file.type)) {
+          return 'Choose a PNG or JPEG screenshot.';
+        }
+        if (!file.size || file.size > MAX_IMAGE_BYTES) {
+          return 'Choose a nonempty screenshot no larger than 5 MB.';
+        }
+        return '';
+      }
+
+      function clearPreview() {
+        preview.hidden = true;
+        preview.removeAttribute('src');
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        previewUrl = undefined;
+      }
+
+      screenshot.addEventListener('change', function () {
+        clearPreview();
+        status.textContent = '';
+        const file = screenshot.files[0];
+        if (!file) return;
+        if (!['image/png', 'image/jpeg'].includes(file.type) || !file.size || file.size > MAX_IMAGE_BYTES) {
+          status.textContent = 'Choose a nonempty PNG or JPEG no larger than 5 MB.';
+          screenshot.value = '';
+          return;
+        }
+        previewUrl = URL.createObjectURL(file);
+        preview.src = previewUrl;
+        preview.hidden = false;
+      });
+      preview.addEventListener('error', function () {
+        clearPreview();
+        screenshot.value = '';
+        status.textContent = 'This image could not be opened. Choose another PNG or JPEG.';
+      });
+      document.getElementById('setup').addEventListener('input', function () {
+        status.textContent = '';
+      });
+      document.getElementById('setup').addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (busy) return;
+        const error = inputError(
+          document.getElementById('template').value.trim(),
+          document.getElementById('folder').value.trim(), screenshot.files[0]
+        );
+        if (error) { status.textContent = error; return; }
+        busy = true;
+        document.getElementById('extract').disabled = true;
+        document.getElementById('results').hidden = true;
+        status.textContent = 'Extracting text from ' + screenshot.files[0].name + '...';
+        google.script.run.withSuccessHandler(function (result) {
+          document.getElementById('ocrText').value = result.text;
+          document.getElementById('results').hidden = false;
+          finish((result.text ? 'OCR completed' : 'No text detected') + ' in ' +
+            (result.elapsedMs / 1000).toFixed(2) + ' seconds. No Forms or roster created. Resource access is still unchecked.');
+        }).withFailureHandler(function (error) {
+          finish(error.message || 'OCR failed. Check script authorization and retry.');
+        }).extractScreenshot(document.getElementById('setup'));
+      });
+      window.addEventListener('unload', clearPreview);
+    </script>
+  </body>
+</html>
