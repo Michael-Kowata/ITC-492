@@ -1,4 +1,15 @@
 \section{Proposed Design}
+\subsection{Selected OCR Service}
+Google Cloud Vision OCR was selected for the initial trial on November 8, 2026.
+The proposed integration sends image content from Apps Script to the synchronous
+Vision API, beginning with \texttt{TEXT\_DETECTION}. Inline image requests do not
+require creating a Drive file; images are nevertheless transmitted to Google
+for processing\cite{googleCloudVisionOcr}. The owner reports a working connection
+and supplied one OCR output for comparison; broader configuration and recognition
+testing remain pending. Credentials must not be exposed in
+the sidebar or distributed spreadsheet template. Service selection is not an
+experimental result.
+
 \subsection{User Workflow}
 \begin{enumerate}
 \item Open a custom menu in the control spreadsheet and display the sidebar.
@@ -28,9 +39,16 @@ run data. M2 will validate copying, first-use authorization, and storage isolati
 These are proposed interaction and deployment choices, not a completed interface.
 
 \subsection{Components and Recovery}
-Planned source files include \texttt{Code.gs} for server operations,
+Initial scaffold source files include \texttt{Code.gs} for the menu and sidebar,
 \texttt{Sidebar.html} for the upload interface, and \texttt{appsscript.json}
-for configuration. These are planned components, not implemented modules.
+for configuration. The sidebar provides resource-link format checks and a local
+image preview, with an explicit action to send the image through Apps Script to
+Cloud Vision and display raw text. It does not verify resource permissions or
+create output files. The owner reports successful live OCR output; quantitative
+evaluation beyond the first sample remains pending. Privacy-reviewed fictional-name
+fixtures are versioned with the source; real screenshots and reference rosters
+remain outside version control. The provisional preview limit is 5 MiB, subject
+to the upload and OCR trials.
 Persistent run records should associate a run identifier and stable entry
 identifier with the name, form identifier, responder URL, and processing status.
 Names alone cannot be keys because two students may share the same display name.
@@ -39,8 +57,8 @@ A failed request after copying a form but before recording its identifier can
 cause a duplicate on retry. The implementation must reconcile existing resources
 before repeating creation; a local success flag alone is insufficient. The
 storage mechanism and reconciliation method will be selected and tested in M2.
-Upload limits, authorization scopes, execution limits, and OCR selection are
-also open technical decisions.
+Cloud Vision is selected and initial scopes and a 5 MiB input cap are implemented;
+execution-limit and independent-account validation remain open.
 
 \subsection{Configuration and Student Access}
 The template and destination folder are the two required configuration inputs.

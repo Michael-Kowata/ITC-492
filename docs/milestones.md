@@ -22,8 +22,8 @@ attention; any scope or date changes must be recorded explicitly.
 | ID | Milestone | Start | Current End / Due | Status |
 | --- | --- | --- | --- | --- |
 | M1 | Scope and project foundation | 2026-09-14 | 2026-10-28 | Completed; actual end |
-| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | Planned |
-| M3 | Screenshot extraction and review | 2026-11-05 | 2026-11-11 | Planned |
+| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | In progress; past target as of November 8 |
+| M3 | Screenshot extraction and review | 2026-11-05 | 2026-11-11 | Initial OCR path implemented; review pending |
 | M4 | Sheet and individual form creation | 2026-11-12 | 2026-11-18 | Planned |
 | M5 | Link matching and recovery | 2026-11-19 | 2026-11-25 | Planned |
 | M6 | Evaluation and documentation | 2026-11-26 | 2026-12-02 | Planned |
@@ -36,6 +36,13 @@ upload and staging-tab approval. M4-M5 create output forms and correct links
 with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
 ## Change History
+
+November 8 status checkpoint: M2 remains open. OCR/sidebar evidence is available,
+but Google resource creation/access trials, CI, independent-copy setup checks,
+and final design review remain. M3 extraction overlaps M2; roster review is next.
+No due dates changed at this checkpoint. Replanning is needed if remaining work
+cannot fit; December 7 remains the final target. Historical weekly logs must
+record their actual periods, not this checkpoint's work retroactively.
 
 | Recorded | Milestone | Previous Due | Revised Due | Reason |
 | --- | --- | --- | --- | --- |
@@ -73,4 +80,4 @@ final presentation dates must be confirmed independently of development targets.
 [GitHub Milestones](https://github.com/Michael-Kowata/ITC-492/milestones) hold
 current dates and issue status. Milestone branches are created or updated from
 main before work begins and deleted after completion. M1 is closed and its
-branch has been removed. M2 is the next development milestone.
+branch has been removed. M2 is the current incomplete development milestone.

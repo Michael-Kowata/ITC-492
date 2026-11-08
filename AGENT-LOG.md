@@ -1,7 +1,103 @@
 # Agent Log
 
+## 2026-11-08: OCR Checkpoint Reconciliation
+
+- Owner requested documentation reconciliation, Wiki/progress updates, and a
+  checkpoint commit before proceeding to roster review.
+- Corrected stale implementation/evaluation statements across paper, READMEs,
+  design, and timeline. M2 is past target; M3 extraction overlaps it. Due dates
+  remain unchanged, with December 7 the final target; unfinished issues stay open.
+- Re-ran 72 OCR and 16 scaffold assertions in the tool V8 runtime with source
+  injection replacing Node imports. Node and LaTeX tools are unavailable, so
+  native Node execution, CI, and PDF compilation are not claimed.
+- Owner tested sidebar/OCR; broader usability, permissions, copied-spreadsheet
+  isolation, run state, and Form generation remain pending.
+
+## 2026-11-08: First Raw OCR Output Comparison
+
+- Owner supplied raw text with Quinn Harmon's attendance suffix split into two
+  lines. Codex preserved it and documented 18/19 exact reference-row matches,
+  one incorrect row, and one extra fragment, using sequence alignment.
+- Updated the paper, sandbox observations, and trial status. No runtime logic
+  changed or automatic correction applied. Exact run metadata/timing remain unknown.
+- Human action pending: confirm the reconstructed attendance label during review.
+
+## 2026-11-08: Owner-Reported Live OCR Success
+
+- Owner confirmed that OCR output works as intended after integration.
+- Codex updated trial status, application README, sandbox observations, and
+  paper to record this limited live functionality check without inventing metrics.
+- Raw output, exact test input/version, timing, and reference comparison remain
+  pending. No issue closed, live request made by Codex, or runtime code changed.
+- Human acceptance: OCR output functionality confirmed; full trial acceptance
+  and roster-generation checks remain pending.
+
+## Cloud Vision Sidebar Wiring
+
+- Owner reported Cloud/script setup and observed the old format-check message.
+- Codex added file upload via google.script.run, server-side PNG/JPEG/size checks,
+  OAuth-authenticated Vision requests, raw text display, and actionable errors.
+- Added manifest scopes, reauthorization instructions, and mocked API tests.
+- Checks: 72 OCR assertions passed in the tool V8 runtime with source injected
+  in place of Node file imports; whitespace check passed. Node execution and
+  live Google/browser checks were not performed.
+- No live API request, permission verification, roster approval, or Form creation
+  performed by Codex. Human acceptance and live fixture evaluation pending.
+
+## 2026-11-08: Cloud Vision Selection
+
+- Owner selected Google Cloud OCR; recorded Google Cloud Vision as the initial
+  service, with TEXT_DETECTION as the trial baseline.
+- Codex checked official setup/OCR documentation, added the technology sandbox
+  plan, updated the trial checklist and paper design, and added a platform citation.
+- No Cloud configuration, billing changes, credentials, uploads, or API calls
+  performed. Authentication and measured results remain pending.
+- Human review pending; source whitespace checked, PDF compilation not run.
+
 Record one entry per Codex-assisted change. Human checks must be filled in by
 the reviewer after they occur; Codex must not mark its own work accepted.
+
+## 2026-11-08: OCR Trial Preparation
+
+- Codex added a reproducible trial checklist distinguishing 19-row extraction
+  from 17-student filtering/ordering, with native-resolution baseline, raw
+  evidence, cleanup checks, and limitations of AI-edited input.
+- Updated application README and paper Evaluation/Results with fixture readiness
+  and the owner's limited sidebar smoke-check report, not measured OCR results.
+- No engine selected, image uploaded to an OCR service, or OCR run performed.
+- Human review: pending. Full Google integration and LaTeX compilation untested.
+
+## 2026-11-08: Attendance Policy and Expected Roster
+
+- Owner confirmed excluding IT Support and Instructor, preserving `- IP` for
+  in-person students, and administering their tests first.
+- Codex updated requirements, design, paper, and fixture expectations: 17
+  students, two in-person first; raw 19-row transcription remains unchanged.
+- Baseline uses screenshot order within attendance groups and manual link
+  distribution; no automatic access gating or working generation claimed.
+- Human review pending for implementation details; no OCR or Google calls made.
+
+## 2026-11-08: Cropped Zoom Fixture Review
+
+- Owner replaced the fixture with `Zoom Screenshot Sample.png`, removing avatars.
+- Codex visually checked all 19 rows against the manual reference and updated
+  the reference filename and fixture documentation. No image edits performed.
+- Inspected PNG dimensions and chunk types: 172 x 612 pixels, 123,905 bytes,
+  no text or EXIF chunks. Recorded native resolution as an OCR test condition.
+- Original image remains ignored; replacement is eligible for versioning.
+  No commit, publication, or OCR execution performed.
+- Roster exclusion and suffix-cleanup rules remain pending owner clarification.
+
+## 2026-11-08: AI-Edited Zoom Test Capture
+
+- Owner supplied a real Zoom capture with all names replaced using AI.
+- Codex inspected it, documented provenance, and manually transcribed 19 rows
+  into reference JSON, preserving labels. No OCR results claimed.
+- Temporarily ignored the image pending avatar/metadata privacy review.
+  No image changes, commit, or publication performed.
+- Human checks pending: transcription, avatar/metadata privacy, and label rules.
+- Owner clarified earlier sidebar testing: valid links accepted, invalid links
+  rejected. No validation bug was demonstrated by that report.
 
 ## 2026-09-14: Project Structure
 
@@ -237,6 +333,22 @@ the reviewer after they occur; Codex must not mark its own work accepted.
   account, not necessarily a school account. Recorded Google sign-in with no
   school-domain restriction and personal-account access tests for M2.
 - Updated design, requirements, proposal, and paper; no access test claimed.
+
+## 2026-10-30: Minimal Apps Script Scaffold (Issue #10)
+
+- Codex added menu/sidebar source, a minimal manifest, fictional roster fixture,
+  fixture privacy policy, setup instructions, and an Apps Script sandbox trial.
+- Updated repository status and paper design to distinguish implemented preview
+  from planned upload, OCR, permission checks, and output generation.
+- Created `task/10-apps-script-scaffold` from the current workflow-design branch;
+  it includes that branch's design changes. No issue closed or merge performed.
+- Checks: 16 mocked menu/validation assertions passed in the tool's V8 runtime
+  using the test body with source injected instead of Node file imports.
+  Node is unavailable locally, so the documented Node entry point is unverified.
+  `git diff --check` passed before this log update.
+- Human checks before acceptance: run the documented live Sheets smoke checks,
+  inspect the narrow sidebar and fixture privacy policy. Acceptance pending.
+- No live Google, browser-rendering, OCR, or LaTeX compilation result claimed.
 
 ## 2026-10-30: Non-Technical Instructor Interface (Issue #8)
 
