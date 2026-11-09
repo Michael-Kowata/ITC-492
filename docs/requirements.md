@@ -13,7 +13,7 @@ Sheet -> copy template per student -> write each matching responder link.
 
 | ID | Requirement | Acceptance evidence | Task |
 | --- | --- | --- | --- |
-| R01 | Upload one PNG or JPEG of Zoom's Participants panel through a Sheets sidebar | Extract visible names, excluding controls and role/self labels; validate missing, invalid, empty, and oversized input before processing | T07 |
+| R01 | Upload 1-3 PNG/JPEG Participants screenshots per selection into one draft | Process sequentially; retain successful images on failure; retry failed items; preserve corrections and sources; skip exact cross-image overlaps and invalidate approval after additions | T07, T08 |
 | R02 | Allow correction, removal, and addition of extracted names | Operator can inspect the complete roster and cancel without creating output rosters or student forms; temporary OCR resources follow the cleanup policy | T08 |
 | R03 | Give each approved entry a stable ID | Two identical names remain separate entries throughout a run and resume | T08 |
 | R04 | Create a Google Sheet for the approved roster | Exactly one row per approved entry, with entry ID, name, responder link, and status | T09 |
@@ -38,7 +38,7 @@ Exclude IT Support and Instructor entries from Form creation; the instructor
 confirms exclusions during review. Do not treat every host/co-host as a
 non-student solely because of their Zoom role.
 
-Preserve the `- IP` suffix in approved names, roster rows, and Form titles: it
+Preserve the `- IP` suffix in approved names and roster rows, but not Form titles: it
 denotes in-person attendance. Entries without it are treated as online under
 the current naming convention, subject to instructor correction during review.
 Create and list in-person entries first, preserving screenshot order within
@@ -51,7 +51,19 @@ Acceptance: the current 19-row fixture yields 17 student Forms, with Riley
 Carter - IP and Quinn Harmon - IP first, suffixes intact, and no IT Support or
 Instructor Form. These are expected outcomes, not implemented/tested results.
 
-## Evaluation Baseline
+## Form Naming Policy (November 9)
+
+Planned Form title and Drive filename: `Student Name - Template Form Title`.
+Read the title from the template Form, not its link or Drive filename. Remove
+only the student's trailing `- IP` attendance marker when naming; preserve
+internal hyphens, reviewed attendance, and in-person-first ordering.
+Example: `Riley Carter - IP` becomes `Riley Carter - OSHA Final Exam` for template
+`OSHA Final Exam`. Keep the template unchanged. Equal names receive distinct
+Form IDs; titles are not identity or retry keys. Snapshot the template title
+with generation configuration for consistent retries. These are M4/#14
+requirements, not implemented behavior.
+
+## Evaluation Method
 
 Usability is a core acceptance criterion. In addition to technical checks,
 observe a non-technical instructor completing the workflow using brief written
@@ -83,7 +95,9 @@ These are planned checks, not completed results.
 - An individual form is not proof of the respondent's identity; access settings
   need to be tested with the intended audience.
 - The operator corrects display names and removes non-students. Hidden names,
-  gallery-view tiles, scrolling, and multiple screenshots are outside initial scope.
+  gallery-view tiles and automatic scrolling are outside scope. The operator may
+  scroll manually and supply successive screenshots; only visible entries are
+  considered. Matching names require manual overlap review.
 - Sample layout validation, template settings, Google authentication method, and
   performance target remain decisions for the technology trials.
 

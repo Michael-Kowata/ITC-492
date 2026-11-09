@@ -39,6 +39,27 @@ run data. M2 will validate copying, first-use authorization, and storage isolati
 These are proposed interaction and deployment choices, not a completed interface.
 
 \subsection{Components and Recovery}
+The multi-screenshot extension appends OCR results to one draft while preserving
+corrections and entry IDs. Source filenames and upload IDs track provenance;
+repeated appends of a retained upload ID do not duplicate rows. Up to three images
+can be selected for sequential processing with per-image failures and retry.
+Exact name/attendance matches across screenshots are omitted before appending,
+with a per-image skipped count. Users must manually add distinct same-name students
+if skipped; this is a known identity-ambiguity limitation.
+within-image duplicates and uncertain matches remain for manual review. Additions
+invalidate approval. The prototype now permits 300 staging rows and chunked
+approval storage. Review, compact layout, and batches were owner-tested; the
+latest exact-overlap skipping change awaits live confirmation.
+
+The review prototype writes draft entries into a control-sheet staging tab with
+inclusion checkboxes, editable names, attendance selection, and original OCR hints.
+Ambiguous suffixes require correction or exclusion before approval. New entries
+receive stable IDs; duplicate display names remain separate. Approval stores a
+document-scoped snapshot only after comparing the current roster with the preview
+fingerprint. Changes invalidate approval. Cancellation retains the staging tab
+but clears active approval. The owner confirmed the original review works; it does
+not yet create Forms or implement generation recovery.
+
 Initial scaffold source files include \texttt{Code.gs} for the menu and sidebar,
 \texttt{Sidebar.html} for the upload interface, and \texttt{appsscript.json}
 for configuration. The sidebar provides resource-link format checks and a local

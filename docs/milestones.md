@@ -37,6 +37,12 @@ with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
 ## Change History
 
+November 9 checkpoint: owner-reported review/approval, compact sidebar, and
+three-image batches are recorded. Latest overlap skipping needs live confirmation.
+M3 remains incomplete pending acceptance checks; M2 integration/setup gaps remain.
+M4/#14 now includes standardized Form/Drive names without the trailing attendance
+marker. No dates changed; December 7 remains the final target.
+
 November 8 status checkpoint: M2 remains open. OCR/sidebar evidence is available,
 but Google resource creation/access trials, CI, independent-copy setup checks,
 and final design review remain. M3 extraction overlaps M2; roster review is next.
