@@ -10,7 +10,9 @@ One owner-supplied sample matches 18/19 reference display rows exactly; timing
 and broader evaluation remain pending. Permission
 verification, output roster generation, and Form copying remain unimplemented.
 Editable staging-sheet review and approval were owner-tested successfully.
-The multi-screenshot extension awaits live validation.
+The owner also confirmed compact review and three-image batches work. Only the
+latest exact-overlap skipping change awaits live confirmation; broader failure
+and independent-copy checks remain pending.
 The owner reported successful setup and valid/invalid link
 checks; the remaining smoke checks are not yet individually confirmed.
 
