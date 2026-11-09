@@ -15,7 +15,8 @@ accuracy on unedited captures.
 text, not OCR results or an approved student roster. Role labels and `- IP` are
 preserved for extraction comparison. The owner confirmed that source rows 1 and
 2 (IT Support and Instructor) are excluded from the student roster. The `- IP`
-suffix denotes in-person attendance and must remain in names and Form titles.
+suffix denotes in-person attendance and remains in reviewed roster names.
+Strip it only when naming copied Forms and Drive files, not from this reference.
 The expected roster has 17 students: 2 in-person and 15 online. Riley Carter - IP
 and Quinn Harmon - IP come first, followed by the other students in screenshot
 order. `expectedStudentSourceRows` uses one-based positions in the raw `rows`

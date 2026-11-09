@@ -5,7 +5,8 @@ will extract student names from a roster screenshot, let the user correct them,
 create a Google Sheet, and copy a template Google Form separately for each
 student. Each roster row will contain the student's name and their own form's
 responder link. Sidebar upload and Cloud Vision OCR are implemented and
-owner-tested. Roster review and output generation remain unimplemented.
+owner-tested. Editable staging-sheet review and approval are implemented with
+live validation pending; output generation remains unimplemented.
 
 ## Focused Scope
 

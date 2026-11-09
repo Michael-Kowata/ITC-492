@@ -33,7 +33,8 @@ and without developer intervention.
 \subsection{Attendance Priority}
 The project owner specified that IT Support and Instructor entries are excluded
 from the student roster. The suffix \texttt{- IP} denotes in-person attendance
-and is preserved in roster names and Form titles. Under the current naming
+and is preserved in roster names but omitted from copied Form titles and Drive
+filenames. Under the current naming
 convention, entries without the suffix represent online students, subject to
 instructor review. The baseline creates and lists in-person entries first,
 retaining screenshot order within each group and stable entry identifiers.
@@ -44,6 +45,14 @@ mechanism. The current fixture has 19 visible rows and an expected roster of
 not measured OCR or Form-generation results.
 
 \subsection{Approval and Privacy}
+Copied Form titles and Drive filenames will use student name followed by a
+separator and the template Form title, removing only the student's trailing
+\texttt{- IP}. Preserve internal hyphens and roster attendance metadata.
+For example, \texttt{Riley Carter - IP} becomes
+\texttt{Riley Carter - OSHA Final Exam} for template \texttt{OSHA Final Exam}.
+Snapshot the template title for retries and leave the template unchanged.
+Duplicate titles still require distinct Form IDs. This is planned behavior.
+
 The control spreadsheet is the working surface; the generated roster is a
 separate deliverable. Cancellation before approval must not create an output
 roster or student forms. Temporary OCR resources may already exist and must

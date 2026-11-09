@@ -18,26 +18,61 @@
       #preview[hidden] { display: none; }
       textarea { width: 100%; min-height: 220px; font: inherit; }
       button:disabled { opacity: 0.6; cursor: wait; }
+      h2 { font-size: 16px; margin-top: 20px; }
+      #reviewSummary, #reviewErrors, #reviewNames { overflow-wrap: anywhere; }
+      #confirmApproval { width: auto; }
+      details { border-top: 1px solid #dadce0; margin-top: 16px; padding-top: 10px; }
+      summary { cursor: pointer; font-weight: 600; overflow-wrap: anywhere; }
+      .review-scroll { max-height: 220px; overflow-y: auto; overscroll-behavior: contain; margin-top: 8px; }
+      .review-scroll ul, .review-scroll ol { margin: 0; padding: 0 8px 0 26px; }
+      .review-scroll li { padding: 5px 0; }
     </style>
   </head>
   <body>
-    <h1>Roster setup</h1>
+    <h1>Roster Forms</h1>
+    <details id="setupPanel" open>
+      <summary>Setup and screenshots</summary>
     <form id="setup">
       <label for="template">Template Form editor link</label>
       <input id="template" type="url" required autocomplete="off" placeholder="https://docs.google.com/forms/d/.../edit">
       <label for="folder">Destination Drive folder link</label>
       <input id="folder" type="url" required autocomplete="off" placeholder="https://drive.google.com/drive/folders/...">
-      <label for="screenshot">Participants screenshot</label>
-      <input id="screenshot" name="screenshot" type="file" accept="image/png,image/jpeg" required>
+      <label for="screenshot">Participants screenshots (up to 3)</label>
+      <input id="screenshot" name="screenshot" type="file" accept="image/png,image/jpeg" multiple required>
       <img id="preview" alt="Selected Participants screenshot" hidden>
-      <p>The selected image will be sent to Google Cloud Vision for OCR.</p>
-      <button id="extract" type="submit">Extract text</button>
+      <p>Selected images will be sent to Google Cloud Vision for OCR.</p>
+      <button id="extract" type="submit">Extract and add screenshots</button>
     </form>
-    <p id="status" role="status" aria-live="polite"></p>
     <section id="results" hidden>
+      <details>
+      <summary>Raw OCR text</summary>
       <label for="ocrText">Raw OCR text</label>
       <textarea id="ocrText" readonly></textarea>
+      </details>
     </section>
+    </details>
+    <p id="status" role="status" aria-live="polite"></p>
+    <ul id="batchStatus" aria-label="Screenshot processing status" style="overflow-wrap: anywhere;"></ul>
+    <button id="retryBatch" type="button" hidden>Retry failed screenshots</button>
+    <h2>Roster review</h2>
+    <button id="refreshReview" type="button">Refresh review</button>
+    <button id="cancelReview" type="button">Cancel review</button>
+    <p id="reviewSummary" role="status" aria-live="polite"></p>
+    <p id="reviewIssueCount" role="status" aria-live="polite">No review loaded.</p>
+    <label><input id="confirmApproval" type="checkbox"> I checked names, attendance, exclusions, and possible overlaps. Included matching names are distinct students.</label>
+    <button id="approveReview" type="button" disabled>Approve roster</button>
+    <details id="reviewIssuesPanel">
+      <summary id="reviewIssuesLabel">Errors and overlap warnings (0)</summary>
+      <div class="review-scroll" tabindex="0" role="region" aria-labelledby="reviewIssuesLabel">
+        <ul id="reviewErrors"></ul>
+      </div>
+    </details>
+    <details id="reviewNamesPanel">
+      <summary id="reviewNamesLabel">Preview roster (0)</summary>
+      <div class="review-scroll" tabindex="0" role="region" aria-labelledby="reviewNamesLabel">
+        <ol id="reviewNames"></ol>
+      </div>
+    </details>
     <script>
       const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
       let previewUrl;
@@ -45,6 +80,86 @@
       const screenshot = document.getElementById('screenshot');
       const preview = document.getElementById('preview');
       let busy = false;
+      let reviewSignature = null;
+      let activeReviewId = null;
+      let batch = [];
+      let batchTarget = null;
+      let reviewValid = false;
+      function showReview(result) {
+        document.getElementById('setupPanel').open = false;
+        document.getElementById('reviewNamesPanel').open = false;
+        const warningCount = (result.warnings || []).length;
+        document.getElementById('reviewIssueCount').textContent = result.errors.length +
+          ' blocking errors; ' + warningCount + ' overlap warnings.';
+        document.getElementById('reviewIssuesLabel').textContent = 'Errors and overlap warnings (' +
+          (result.errors.length + warningCount) + ')';
+        document.getElementById('reviewNamesLabel').textContent = 'Preview roster (' + result.entries.length + ')';
+        document.getElementById('reviewIssuesPanel').open = result.errors.length > 0;
+        reviewSignature = result.signature;
+        activeReviewId = result.sheetId;
+        reviewValid = !result.errors.length && !result.approved;
+        document.getElementById('confirmApproval').checked = false;
+        document.getElementById('approveReview').disabled = true;
+        const online = result.entries.filter(function (entry) { return entry.attendance === 'Online'; }).length;
+        const unresolved = result.entries.filter(function (entry) {
+          return entry.attendance !== 'Online' && entry.attendance !== 'In-person';
+        }).length;
+        document.getElementById('reviewSummary').textContent = result.sheetName + ': ' +
+          result.entries.length + ' included, ' + result.excluded + ' excluded; ' +
+          result.inPerson + ' in-person, ' + online + ' online' +
+          (unresolved ? ', ' + unresolved + ' unresolved' : '') + '. ' +
+          (result.approved ? 'Approved at last check. Edits require approval again.' : 'Not approved.');
+        ['reviewErrors', 'reviewNames'].forEach(function (id) { document.getElementById(id).replaceChildren(); });
+        result.errors.forEach(function (message) {
+          const li = document.createElement('li'); li.textContent = message;
+          document.getElementById('reviewErrors').appendChild(li);
+        });
+        (result.warnings || []).forEach(function (message) {
+          const li = document.createElement('li'); li.textContent = message;
+          document.getElementById('reviewErrors').appendChild(li);
+        });
+        result.entries.forEach(function (entry) {
+          const li = document.createElement('li'); li.textContent = entry.name + ' (' + entry.attendance + ') - ' + entry.source;
+          document.getElementById('reviewNames').appendChild(li);
+        });
+      }
+      function reviewCall(method, argument) {
+        if (busy) return;
+        busy = true;
+        reviewValid = false;
+        document.getElementById('approveReview').disabled = true;
+        document.getElementById('extract').disabled = true;
+        status.textContent = 'Updating review...';
+        const runner = google.script.run.withSuccessHandler(function (result) {
+          if (typeof result === 'string') {
+            reviewSignature = null;
+            activeReviewId = null;
+            document.getElementById('reviewSummary').textContent = result;
+            document.getElementById('reviewErrors').replaceChildren();
+            document.getElementById('reviewNames').replaceChildren();
+            document.getElementById('reviewIssueCount').textContent = 'No active review.';
+            document.getElementById('reviewIssuesLabel').textContent = 'Errors and overlap warnings (0)';
+            document.getElementById('reviewNamesLabel').textContent = 'Preview roster (0)';
+            document.getElementById('reviewIssuesPanel').open = false;
+            document.getElementById('reviewNamesPanel').open = false;
+            document.getElementById('confirmApproval').checked = false;
+          } else showReview(result);
+          finish('Review updated. No student Forms or output spreadsheet created.');
+        }).withFailureHandler(function (error) { finish(error.message || 'Could not update review. Retry.'); });
+        if (method === 'approve') runner.approveRoster(argument);
+        else if (method === 'cancel') runner.cancelRosterReview();
+        else runner.getRosterReview();
+      }
+      document.getElementById('refreshReview').addEventListener('click', function () { reviewCall('refresh'); });
+      document.getElementById('cancelReview').addEventListener('click', function () {
+        if (window.confirm('Cancel the active review and its approval? The review sheet will be retained.')) reviewCall('cancel');
+      });
+      document.getElementById('confirmApproval').addEventListener('change', function () {
+        document.getElementById('approveReview').disabled = busy || !reviewValid || !this.checked;
+      });
+      document.getElementById('approveReview').addEventListener('click', function () {
+        if (reviewValid && document.getElementById('confirmApproval').checked) reviewCall('approve', reviewSignature);
+      });
       function finish(message) {
         busy = false;
         document.getElementById('extract').disabled = false;
@@ -79,6 +194,10 @@
         status.textContent = '';
         const file = screenshot.files[0];
         if (!file) return;
+        if (screenshot.files.length > 3) {
+          status.textContent = 'Select no more than 3 screenshots at a time.';
+          screenshot.value = ''; return;
+        }
         if (!['image/png', 'image/jpeg'].includes(file.type) || !file.size || file.size > MAX_IMAGE_BYTES) {
           status.textContent = 'Choose a nonempty PNG or JPEG no larger than 5 MB.';
           screenshot.value = '';
@@ -96,26 +215,94 @@
       document.getElementById('setup').addEventListener('input', function () {
         status.textContent = '';
       });
+      function batchRpc(method, ...args) {
+        return new Promise(function (resolve, reject) {
+          const runner = google.script.run.withSuccessHandler(resolve).withFailureHandler(reject);
+          if (method === 'target') runner.getRosterBatchTarget();
+          else runner.processRosterScreenshot(...args);
+        });
+      }
+      function readImage(file) {
+        return new Promise(function (resolve, reject) {
+          const reader = new FileReader();
+          reader.onerror = function () { reject(new Error('Could not read the selected image.')); };
+          reader.onabort = function () { reject(new Error('Image read was canceled.')); };
+          reader.onload = function () { resolve({ type: file.type, base64: String(reader.result).split(',')[1] }); };
+          reader.readAsDataURL(file);
+        });
+      }
+      function renderBatch() {
+        const list = document.getElementById('batchStatus'); list.replaceChildren();
+        batch.forEach(function (item) {
+          const li = document.createElement('li');
+          li.textContent = item.file.name + ': ' + item.state +
+            (item.skipped ? ' - ' + item.skipped + ' overlaps skipped' : '') +
+            (item.elapsedMs !== undefined ? ' (' + (item.elapsedMs / 1000).toFixed(2) + ' s OCR)' : '') +
+            (item.error ? ' - ' + item.error : '');
+          list.appendChild(li);
+        });
+      }
+      async function runBatch(retry) {
+        if (busy) return;
+        busy = true;
+        document.getElementById('extract').disabled = true;
+        document.getElementById('retryBatch').disabled = true;
+        document.getElementById('approveReview').disabled = true;
+        document.getElementById('confirmApproval').checked = false;
+        screenshot.disabled = true;
+        try {
+          if (!retry) batchTarget = await batchRpc('target');
+          for (let i = 0; i < batch.length; i++) {
+            const item = batch[i];
+            if (item.state === 'Added') continue;
+            item.state = 'Processing'; item.error = ''; renderBatch();
+            status.textContent = 'Processing screenshot ' + (i + 1) + ' of ' + batch.length + '...';
+            try {
+              const result = await batchRpc('image', await readImage(item.file), item.source, batchTarget);
+              batchTarget = result.review.sheetId;
+              item.state = 'Added';
+              item.elapsedMs = result.elapsedMs;
+              item.skipped = result.review.skippedOverlaps || 0;
+              showReview(result.review);
+              if (result.text !== null) {
+                item.text = result.text;
+                document.getElementById('ocrText').value = batch.filter(entry => entry.text !== undefined)
+                  .map(entry => entry.file.name + '\n' + entry.text).join('\n\n');
+                document.getElementById('results').hidden = false;
+              }
+            } catch (error) {
+              item.state = 'Failed'; item.error = error.message || 'Request failed; retry this image.';
+            }
+            renderBatch();
+          }
+          const failed = batch.filter(item => item.state === 'Failed').length;
+          finish((batch.length - failed) + ' screenshots added; ' + failed + ' failed. Review exclusions and attendance before approval.');
+        } catch (error) {
+          batch.forEach(item => { if (item.state !== 'Added') { item.state = 'Failed'; item.error = error.message || 'Could not load review.'; } });
+          // No image request was made: the next retry must obtain its target again.
+          batchTarget = undefined;
+          renderBatch(); finish(error.message || 'Could not load review. Retry.');
+        } finally {
+          busy = false;
+          screenshot.disabled = false;
+          document.getElementById('extract').disabled = false;
+          document.getElementById('retryBatch').disabled = false;
+          document.getElementById('retryBatch').hidden = !batch.some(item => item.state === 'Failed');
+        }
+      }
+      document.getElementById('retryBatch').addEventListener('click', function () { runBatch(batchTarget !== undefined); });
       document.getElementById('setup').addEventListener('submit', function (event) {
         event.preventDefault();
         if (busy) return;
-        const error = inputError(
+        const files = Array.from(screenshot.files);
+        if (!files.length || files.length > 3) { status.textContent = 'Select 1 to 3 screenshots.'; return; }
+        const error = files.map(file => inputError(
           document.getElementById('template').value.trim(),
-          document.getElementById('folder').value.trim(), screenshot.files[0]
-        );
+          document.getElementById('folder').value.trim(), file
+        )).find(Boolean);
         if (error) { status.textContent = error; return; }
-        busy = true;
-        document.getElementById('extract').disabled = true;
-        document.getElementById('results').hidden = true;
-        status.textContent = 'Extracting text from ' + screenshot.files[0].name + '...';
-        google.script.run.withSuccessHandler(function (result) {
-          document.getElementById('ocrText').value = result.text;
-          document.getElementById('results').hidden = false;
-          finish((result.text ? 'OCR completed' : 'No text detected') + ' in ' +
-            (result.elapsedMs / 1000).toFixed(2) + ' seconds. No Forms or roster created. Resource access is still unchecked.');
-        }).withFailureHandler(function (error) {
-          finish(error.message || 'OCR failed. Check script authorization and retry.');
-        }).extractScreenshot(document.getElementById('setup'));
+        batch = files.map(file => ({ file: file, source: { id: crypto.randomUUID(), name: file.name }, state: 'Queued', error: '' }));
+        renderBatch(); runBatch(false);
       });
       window.addEventListener('unload', clearPreview);
     </script>

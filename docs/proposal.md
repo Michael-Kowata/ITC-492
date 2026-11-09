@@ -37,8 +37,9 @@ account. The project does not issue certifications or verify eligibility.
 
 The owner confirmed the Participants panel input. Validate it against a sample
 with fictional names in M2; sample testing is not needed to define M1 scope.
-Only names visible in one screenshot are included. Gallery tiles, scrolling,
-and combining screenshots are deferred. Direct screen capture,
+Only names visible in supplied screenshots are included. Successive screenshots
+can be appended to one draft, with manual review of overlaps. Gallery tiles and
+automatic scrolling are deferred. Direct screen capture,
 handwriting, arbitrary table layouts, email delivery, dashboards, grading, and
 aggregating responses are outside the initial scope.
 

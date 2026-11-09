@@ -1,5 +1,84 @@
 # Agent Log
 
+## 2026-11-09: Pre-Form-Creation Checkpoint
+
+- Owner requested reconciliation and a checkpoint before Form copying.
+- Updated naming requirements, paper, fixture policy, evidence, and schedule
+  status. Form/Drive names omit trailing - IP; roster attendance stays unchanged.
+- Recorded owner-reported review, approval, compact sidebar, and batch success;
+  latest exact-overlap skipping remains pending live confirmation.
+- No Form creation or milestone closure claimed. Existing dates retained.
+- Verification: all 167 mocked assertions passed via injected V8 source;
+  whitespace passed. Native Node/CI, live Google retests, and PDF compilation
+  are not claimed. Checkpoint archives source, not a verified deployed revision.
+
+## 2026-11-09: Skip Overlap Rows Before Append
+
+- Owner requested avoiding repeated unchecked rows and excessive warnings.
+  Exact name/attendance matches against included entries in earlier screenshots
+  are now skipped before row-limit validation. Per-image counts replace warnings.
+- Added receipts for all-overlap uploads so retries work even with zero new rows;
+  no-new-row uploads retain approval. Existing review rows are not deleted.
+- Documented distinct same-name students may require manual addition. Same-image
+  duplicates and uncertain matches remain unchanged.
+- Checks: 49 review and 16 batch assertions passed in mocked/injected V8;
+  whitespace passed. Live Sheets validation remains pending.
+
+## 2026-11-09: Three-Image Batch Upload and Reversible Overlap Exclusion
+
+- Owner confirmed the compact sidebar and requested up to three images per
+  selection plus automatic overlap removal. Implemented sequential batch OCR
+  and append, progress, failed-only retries, and target-review guards.
+- Exact cross-source name/attendance matches are unchecked with a visible reason,
+  never deleted. Same-image duplicates and ambiguous matches remain included for
+  review; restoring a distinct same-name student is possible.
+- Added Batch.gs, tests, setup steps, and updated scope/paper. Live batch testing
+  remains pending; no images were sent to Google by Codex.
+- Verification: 164 assertions across batch, review, OCR, scaffold, and compact
+  sidebar tests passed using injected V8 source and mocked services/DOM. Whitespace
+  check passed. Native Node, live browser/Sheets, and PDF compilation not run.
+
+## 2026-11-09: Compact Sidebar Review
+
+- Moved approval before collapsible issue/roster lists, capped list scrolling at
+  220px, added visible counts, and collapsed setup/raw OCR during review.
+- Blocking errors automatically expand without moving approval below the list.
+  Names and warnings remain available; validation rules are unchanged.
+- Checks: 14 mocked DOM assertions cover 300 entries and approval gating;
+  whitespace checked. Live Sheets/browser rendering remains pending.
+
+## 2026-11-09: Attendance Summary Labels
+
+- Owner confirmed successful approval of 17 students and requested replacing
+  "other" with "online". Sidebar now counts Online explicitly and reports
+  unresolved attendance separately when present. Approval rules are unchanged.
+
+## 2026-11-08: Sequential Screenshot Review
+
+- Owner confirmed the original editable review works and approved multiple
+  screenshots per draft. Added append with filename/upload ID, repeat-request
+  detection, overlap warnings, and approval invalidation; existing edits remain.
+- Expanded staging capacity to 300 rows and chunked approval storage (250 KB cap).
+- Updated scope, setup instructions, and paper. Live multi-image validation
+  remains pending. No Forms, commit, or remote update performed.
+- Verification: 40 review, 72 OCR, and 16 scaffold assertions passed with mocked
+  services in injected V8; sidebar syntax and whitespace checks passed. Native
+  Node, browser rendering, Google integration, and PDF compilation not run.
+
+## 2026-11-08: Editable Roster Review (Issue #12)
+
+- Added Review.gs staging-sheet draft, explicit include/attendance editing,
+  split-suffix validation, stable IDs, in-person-first approval snapshot, stale
+  preview checks, edit invalidation, resume, and cancel without output generation.
+- Added sidebar review actions and current-sheet scope, setup instructions,
+  live acceptance checklist, and paper/design notes. Review state is document
+  scoped; retained tabs contain roster data and must be removed before distribution.
+- Created task/12-roster-review from the OCR checkpoint branch; no merge or
+  issue closure. Live Sheets and copied-template validation remain pending.
+- Checks: 27 review assertions plus 72 OCR and 16 scaffold assertions passed
+  with mocked Sheets/storage in injected V8; whitespace and sidebar syntax passed;
+  these are not a live Google or browser-rendering test. Node/PDF tools unavailable.
+
 ## 2026-11-08: OCR Checkpoint Reconciliation
 
 - Owner requested documentation reconciliation, Wiki/progress updates, and a

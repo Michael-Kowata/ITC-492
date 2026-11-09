@@ -33,7 +33,26 @@ shared destination folder, but one copy must not resume or change another's run.
 M2 will review a lightweight interface walkthrough and validate first-use setup;
 later implementation must undergo the usability evaluation specified in R15.
 The sidebar upload/OCR path is implemented and owner-tested. Guided roster
-review, generation, and representative-instructor usability testing remain pending.
+review and approval are implemented and owner-tested; generation and
+representative-instructor usability testing remain pending.
+
+The owner confirmed the original review flow works. The subsequent multi-image
+extension awaits live validation: successive OCR results append without replacing
+corrections and filename/upload IDs track sources. Up to three selected images
+are processed sequentially behind one action; failed images can be retried alone.
+Exact full-name/attendance matches across known sources are skipped before
+append, with a per-image count instead of repeated warnings. Distinct same-name
+students must be added manually if skipped. Same-image duplicates, uncertain
+matches, and attendance conflicts require manual review. Repeated appends of a retained upload
+ID are ignored; re-extraction still requires review. Approval is invalidated by
+additions. Capacity is 300 staging rows; approval entries use chunked properties.
+
+The review prototype uses a dedicated control-sheet tab and document properties
+for its active sheet ID and approved snapshot. IDs survive name corrections;
+new rows receive IDs on refresh. Approval uses a fingerprint of the staging rows
+and refuses stale previews. Edits invalidate approval, and future generation must
+revalidate it. Cancel clears state but retains evidence tabs. This is not yet
+persistent Form-generation run state or a validated copy-isolation mechanism.
 
 ## Template and Folder Configuration
 
@@ -89,7 +108,8 @@ absence means online; the operator can correct this before approval.
 
 Snapshot the approved order with in-person students first and original order
 within each group. Use that order for generation and roster display; preserve
-the suffix in names and Form titles. Retries retain the approved order and IDs.
+the suffix in roster names, but strip it from copied Form titles and filenames.
+Retries retain the approved order and IDs.
 The operator distributes in-person links first. This priority does not itself
 restrict access to online Forms or implement scheduled release.
 
@@ -105,6 +125,12 @@ proof that students can respond. Mark a run complete only when all entries are
 verified; otherwise show partial completion and actionable errors.
 
 ## Student Access and Publication
+
+Naming follows `Student Name - Template Form Title`, removing only the student's
+trailing `- IP`. Set both the Form title and Drive filename; do not change the
+template or reviewed attendance. Capture the template title in generation
+configuration. Duplicate titles are allowed; recovery uses stable entry/Form IDs.
+Form creation is not implemented yet.
 
 Each copy preserves the template questions and includes the student's name in
 its title. Its own responder link is written beside the approved name. Keep form
