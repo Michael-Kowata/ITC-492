@@ -62,3 +62,7 @@ The screenshot has no duplicate names; the separate duplicate-name JSON fixture
 tests roster handling only. A duplicate-name image is still needed to evaluate
 OCR on repeated names. One AI-edited, cropped screenshot is not representative
 evidence for all Zoom screenshots or real classroom accuracy.
+
+The next small Google integration experiment is documented in
+[the two-student Forms/Sheets sandbox](../sandbox/google-forms-integration/README.md).
+It is isolated from the OCR/review application and has no live results yet.

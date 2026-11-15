@@ -8,8 +8,8 @@ the repeated operations while allowing the instructor to verify the roster.
 Reduced effort is an intended benefit, not a measured result of this proposal.
 
 \subsection{Objective and Intended User}
-The intended users are instructors, including people without programming
-experience, each operating a Google account with access to a form template.
+The intended operators are student IT staff supporting the instructor's class,
+including users without programming experience, using authorized Google accounts.
 Routine operation must not require editing source code or entering internal
 resource identifiers. Participants are non-traditional learners pursuing OSHA course
 certification, not necessarily students with institutional Google accounts.
@@ -24,9 +24,10 @@ The input is one or more PNG or JPEG screenshots of Zoom's Participants panel,
 processed sequentially into a draft roster with manual overlap review.
 Only visible names are included. The operator can correct display names and
 remove non-students; the application will not infer identities from nicknames.
-The first version supports multiple instructors through independent copies of
-the control spreadsheet, with one operator, account, template, and roster per
-run. Shared simultaneous use of a single control spreadsheet is deferred.
+The first version uses one shared control spreadsheet and bound script across
+class sessions, with one active operator and roster per run. Staff handoff and
+session reset must avoid stale approval and preserve previous outputs.
+Simultaneous operation is deferred; a shared deployment is not a concurrency guarantee.
 Gallery-view tiles, automatic scrolling, automatic
 screen capture, handwriting, email delivery, grading, and response aggregation
 are outside the initial scope. These boundaries keep the capstone focused on

@@ -1,0 +1,26 @@
+name: JavaScript checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Application and sandbox mocks
+        shell: bash
+        run: |
+          set -euo pipefail
+          for test in roster-form-automation/tests/*.mjs sandbox/google-forms-integration/tests/*.mjs; do
+            node "$test"
+          done
+      - name: Whitespace
+        run: git diff --check HEAD^

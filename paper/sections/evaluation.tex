@@ -34,8 +34,23 @@ against the template and submit fictional responses to verify that each response
 appears only in its corresponding form. Test responder access using a
 representative intended respondent rather than relying on the owner's editor view.
 
+\subsection{Small Google Integration Trial}
+Before production generation, an isolated M2 sandbox will copy a closed,
+empty disposable template for two fictional students and create a separate
+roster spreadsheet with responder links. The copies remain closed until the
+operator explicitly publishes them under the organization's template access
+policy, without selecting a new audience policy. This trial
+does not consume the application's approved roster or implement recovery.
+
+Automated observations compare titles, filenames, unique IDs, folder membership,
+basic item structure, and the template snapshot. Full question settings require
+manual inspection. Respondent testing checks signed-out behavior and external
+personal-account access. Sequential fictional submissions should produce response
+counts of zero/zero, one/zero, then one/one, with answers in separate Forms.
+Record actual observations and cleanup before drawing a feasibility conclusion.
+
 \subsection{Usability Evaluation}
-Observe at least one representative non-technical instructor using a clean copy
+Observe at least one representative student IT staff operator using a clean test instance
 of the control spreadsheet, fictional names, and a test template and folder.
 Provide brief written setup instructions, including authorization, but do not
 coach the participant through the task. Ask them to configure resources, upload
@@ -46,7 +61,9 @@ Record task completion, elapsed time, mistakes, requests for help, and qualitati
 feedback. Developer intervention means the independent-completion criterion was
 not met on that attempt; revise and retest rather than omit the difficulty.
 Check keyboard navigation and understandable status/error messages. Separately
-test two control-spreadsheet copies for configuration and run-state isolation.
+test sequential sessions and staff handoff in the same control spreadsheet:
+prior approval must not apply to a new roster and previous outputs must remain
+intact. Retain cross-copy isolation as supplementary evidence, not a substitute.
 A single participant is a formative usability check, not evidence that the tool
 is usable by all instructors. No usability results are available yet.
 

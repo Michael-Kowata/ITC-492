@@ -41,7 +41,48 @@ included entries, three excluded OCR rows, two in-person students, and 15 online
 students. These are owner-reported checks, not independent usability results.
 The latest change skips exact cross-screenshot overlaps; live confirmation
 remains pending. Distinct same-name students may require manual addition.
-No Form copying or respondent-access results are claimed.
+Production Form generation is not yet validated; the separate feasibility trial
+is described below.
+
+\subsection{Google Integration Trial Status}
+A separate two-student Google integration sandbox was implemented on November
+13, 2026. It creates test copies and a roster, records verification observations,
+and tracks outputs for cleanup. Seventy-two assertions passed using mocked
+Google services in an injected JavaScript runtime after field-level template
+diagnostics were added on November 15, 2026. The owner reported successful
+copy creation, folder placement, naming, copied questions, and submissions after
+manual publication. Counts progressed from one/zero to one/one, and each copy
+contained only its intended answer. These are owner-reported observations;
+respondent account categories and exact execution dates were not supplied.
+The original remained unpublished with zero responses. After deploying the
+field-level diagnostics, the owner reported all template checks passing, with
+no review or failure results. No current tracked discrepancy was detected;
+the cause of an earlier aggregate failure remains unconfirmed. Timestamp-only
+differences require review rather than imply content changes; other differences
+fail and read errors are explicit. These results support the core two-student
+feasibility trial, not complete verification of quiz settings or access policy.
+The owner subsequently confirmed submissions from signed-out users without a
+sign-in prompt and from external personal accounts. The organization sets the
+standard template policy; these observations match its current configuration
+and supersede the earlier mandatory-sign-in assumption. Required name and email
+answers support self-reported matching, not identity authentication. Resource
+cleanup after the successful trial was subsequently confirmed by the owner:
+only generated test copies and the roster were removed, with the template,
+folder, control spreadsheet, and report retained. This does not establish live
+failure or cancellation cleanup. Full settings fidelity remains unconfirmed. Full milestone acceptance
+is separate from this result.
+The experiment is not the production generation workflow.
+
+\subsection{Control Spreadsheet Isolation}
+The owner reported that edits and cancellation in review A did not affect
+review B in a separate spreadsheet after following the approval-isolation test.
+This is owner-reported cross-document isolation evidence, not validation of
+first-use authorization by another account or concurrent use of one document.
+The owner subsequently clarified that deployment uses one shared control
+spreadsheet operated by student IT staff, with only one operator at a time.
+The owner subsequently confirmed that canceling or finishing a review does not
+carry state into the next review. This supports review reuse, not validation of
+production-output preservation or simultaneous-user behavior.
 
 \subsection{Presentation Feedback}
 The proposal presentation was scheduled for September 28, 2026. On October 28,
