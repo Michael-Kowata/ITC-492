@@ -24,9 +24,9 @@ Sheet -> copy template per student -> write each matching responder link.
 | R09 | Report partial failures | Failed entries have an actionable status; successful entries and resource IDs remain recoverable | T12 |
 | R10 | Protect private working data | Local private artifacts use ignored directories; cloud data access and cleanup are documented; committed fixtures use synthetic names | T06, T14 |
 | R11 | Configure template Form and destination folder links | Resolve and confirm resource names and IDs; reject invalid types or inadequate access before processing; snapshot configuration per run | T04, T05, T10 |
-| R12 | Prepare copied forms for the intended respondents | Validate publication/response settings and chosen access policy; report failures without silently broadening access; no automatic public sharing of roster or folder | T05, T10, T11 |
+| R12 | Prepare copied forms for the intended respondents | Preserve and validate the organization's template access settings and required name/email questions; report failures without silently changing access; no automatic public sharing of roster or folder | T05, T10, T11 |
 | R13 | Provide a guided interface for non-technical instructors | Setup, upload, review, approval, progress, and results can be completed without source edits or internal IDs; resolved resource names and approved count are shown | T04, T06, T08 |
-| R14 | Support independent instructor copies | Two separately configured copies use only their own run records and selected resources; copied templates contain no prior roster, private configuration, or credentials | T04, T06, T14 |
+| R14 | Reuse one staff-operated control spreadsheet | One active operator/run at a time; staff handoff and starting the next session must not reuse stale approval or overwrite previous outputs; no simultaneous-operation guarantee | T04, T06, T14 |
 | R15 | Provide usable feedback and recovery | Keyboard-accessible labeled controls, textual status, actionable errors, and retry of failed entries without duplicate creation; observe at least one non-technical instructor completing the representative workflow without developer intervention | T08, T12, T13 |
 
 See [workflow design](architecture.md) for the proposed record fields, resource
@@ -82,15 +82,23 @@ These are planned checks, not completed results.
 
 ## Constraints and Open Decisions
 
-- Multiple instructors use separate copies of the control spreadsheet, with
-  independent configuration and run records. Shared simultaneous operation is deferred.
+- Student IT staff use one canonical control spreadsheet and bound script for
+  the instructor's class across sessions. One active operator/run is the baseline;
+  simultaneous operation is deferred. This supersedes independent instructor
+  copies as the deployment model. The completed A/B isolation test remains evidence,
+  not proof of same-spreadsheet handoff or concurrent-user safety.
 
 - JavaScript in Google Apps Script V8, bound to a control spreadsheet; server logic in `Code.gs` and sidebar UI in `Sidebar.html`.
 - Users select a local image from Downloads or another folder; no manual Drive upload or Drive link is required.
 - One authenticated Google account that can access the template and create resources.
-- Respondents are OSHA-course learners: require Google sign-in, accept personal
-  accounts, and do not restrict responses to a school domain. Validate with an
-  external personal account and a signed-out session in M2.
+- Respondents are OSHA-course learners. The organization sets the standard
+  template and access settings, not individual instructors. Copies must preserve
+  that policy; the script must not independently impose sign-in or domain limits.
+  The current organization configuration allows signed-out and external personal
+  account submissions, both confirmed by the owner in M2. This November 15
+  clarification supersedes the earlier mandatory-sign-in baseline.
+- Preserve required student name and email questions for response matching.
+  Entered values are self-reported identification, not authenticated identity.
 - No automatic public sharing, email distribution, or identity enforcement.
 - An individual form is not proof of the respondent's identity; access settings
   need to be tested with the intended audience.

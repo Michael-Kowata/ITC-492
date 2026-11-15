@@ -5,8 +5,10 @@ Status: proposed design; runtime behavior must be validated in M2.
 
 ## Intended Users and Guided Interface
 
-The tool supports multiple non-technical instructors, each using an independent
-copy of a reusable control spreadsheet. This is not a shared concurrent dashboard.
+Student IT staff operate one shared, canonical control spreadsheet and bound
+script for the instructor's class, reused for successive sessions. Separate
+instructor deployments are not the intended distribution model. The baseline
+allows one active operator/run at a time, not simultaneous editing by staff.
 Routine users do not edit Code.gs, paste internal IDs, or configure developer tools.
 Deployment and source synchronization remain maintainer responsibilities.
 
@@ -22,13 +24,15 @@ Use descriptive labels, logical keyboard focus, and status text rather than colo
 alone. Keep errors specific to the action the instructor can take, such as checking
 folder access; keep sensitive technical details out of ordinary error messages.
 Saved settings remain editable and are revalidated before a new run. Setup guidance
-must cover copying the control spreadsheet and granting required permissions.
+must cover access to the shared control spreadsheet and required authorization.
 
-Configuration and run state must be scoped to each control spreadsheet and its
-operator. Copying the distribution template must not carry prior names, output
-links, credentials, or run state. M2 must verify the chosen storage and copying
-behavior with two independent copies. An instructor can intentionally select a
-shared destination folder, but one copy must not resume or change another's run.
+Review state is document-scoped, so operators of the same spreadsheet share it;
+unique review IDs do not create separate user workspaces. Staff must hand off
+control and finish or cancel the current review before starting another session.
+Previously generated outputs must not be silently deleted when starting anew.
+Repeated-session reset and operator handoff need validation; cross-copy isolation
+does not prove same-document concurrency safety. The owner confirmed the A/B
+edit, approval, and cancellation isolation test, retained as supplementary evidence.
 
 M2 will review a lightweight interface walkthrough and validate first-use setup;
 later implementation must undergo the usability evaluation specified in R15.
@@ -138,16 +142,22 @@ IDs/edit links in operator records, not in the student-facing link column.
 
 Publication, accepting responses, and responder permissions must be validated
 for the selected Google account and intended audience in #9. The audience is
-non-traditional learners taking an OSHA certification course. Require Google
-sign-in while allowing personal accounts without a school-domain restriction.
+non-traditional learners taking an OSHA certification course. The organization
+controls the standard template's access settings; instructors do not select a
+different policy. Preserve these settings rather than independently imposing
+Google sign-in or school-domain restrictions. Preserve required name and email
+questions for self-reported response matching, not authenticated identity.
 Never silently widen access when the selected policy fails. The roster and
 destination folder are not automatically made public: responder access does
 not require granting students editing access to the forms or folder.
 Link distribution remains through the operator's existing class workflow;
 email automation is outside scope. Verify access using an intended respondent,
 not only the owner/editor account. Test an external personal account and verify
-signed-out users must sign in. Report account/template restrictions that prevent
-this policy. No access test has yet been performed.
+signed-out behavior matches the organization's policy. The owner confirmed both
+signed-out submissions without sign-in and external personal-account submissions
+in the two-student trial. Record any conflict with organizational policy rather
+than silently changing it. This November 15 clarification supersedes the earlier
+mandatory-sign-in baseline; full settings fidelity still needs manual checks.
 
 ## Recovery and Data Handling
 

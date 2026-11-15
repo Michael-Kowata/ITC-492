@@ -19,7 +19,7 @@ link. Resolve and confirm both resources and verify required permissions.
 \item Extract visible names, excluding interface controls and role/self labels.
 \item Review and correct the roster in a staging tab, then explicitly approve it.
 \item Create the separate roster spreadsheet and copy the template for each entry.
-\item Prepare each copy for the selected respondent audience and verify access;
+\item Prepare each copy under the organization's template access policy and verify access;
 copying a file alone is not evidence that students can submit responses.
 \item Write each responder link and completion status to its corresponding row.
 \end{enumerate}
@@ -33,9 +33,10 @@ shows progress and per-entry status; completion exposes the output roster link
 and actionable recovery for failed entries. Routine use requires no source-code
 changes. Labeled controls, keyboard access, and textual status are design requirements.
 
-Each instructor uses a separate copy with independently scoped configuration and
-run state. The distribution template must contain no previous roster or private
-run data. M2 will validate copying, first-use authorization, and storage isolation.
+Student IT staff use one canonical control spreadsheet with document-scoped
+state, one active operator at a time. Reuse requires explicit review completion
+or cancellation and safe session handoff. Authorization still applies to each
+operator; cross-copy isolation does not establish same-document concurrency safety.
 These are proposed interaction and deployment choices, not a completed interface.
 
 \subsection{Components and Recovery}
@@ -90,8 +91,12 @@ The original template remains unchanged.
 
 The design distinguishes form creation, publication/response settings, and
 verified respondent access. Respondents are non-traditional OSHA-course learners;
-the intended policy requires Google sign-in but permits personal accounts without
-a school-domain restriction, as confirmed by the project owner.
+the organization controls the standard template and access settings, not
+individual instructors. Copies must preserve this policy without independently
+imposing Google sign-in or school-domain restrictions. The current policy permits
+signed-out and external personal-account submissions. Required name and email
+questions provide self-reported identification for matching responses, not
+authenticated identity. This clarification supersedes the initial sign-in baseline.
 The system must not silently broaden access after a permissions failure. Neither
 the folder nor the roster is automatically made public. Operator distribution
 of responder links remains separate from creation; automated email is out of scope.

@@ -22,7 +22,7 @@ attention; any scope or date changes must be recorded explicitly.
 | ID | Milestone | Start | Current End / Due | Status |
 | --- | --- | --- | --- | --- |
 | M1 | Scope and project foundation | 2026-09-14 | 2026-10-28 | Completed; actual end |
-| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | In progress; past target as of November 8 |
+| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | Core integration trial successful; remaining criteria under review November 15 |
 | M3 | Screenshot extraction and review | 2026-11-05 | 2026-11-11 | Initial OCR path implemented; review pending |
 | M4 | Sheet and individual form creation | 2026-11-12 | 2026-11-18 | Planned |
 | M5 | Link matching and recovery | 2026-11-19 | 2026-11-25 | Planned |
@@ -36,6 +36,12 @@ upload and staging-tab approval. M4-M5 create output forms and correct links
 with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
 ## Change History
+
+November 15 checkpoint: owner confirmed two-student copy creation, names,
+destination, responses isolated at 1/0 then 1/1, and latest template diagnostics
+all PASS. Core feasibility is established by owner report, not full M2 closure.
+See [M2 acceptance review](m2-acceptance.md) for the remaining GitHub criteria.
+No dates or remote issue states changed.
 
 November 9 checkpoint: owner-reported review/approval, compact sidebar, and
 three-image batches are recorded. Latest overlap skipping needs live confirmation.

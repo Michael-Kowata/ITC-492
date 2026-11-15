@@ -1,5 +1,101 @@
 # Agent Log
 
+## 2026-11-15: Review Reuse and Wiki Synchronization
+
+- Owner confirmed single-operator access and no review carryover after canceling
+  or finishing. Updated paper and M2 inventory with this limited owner evidence.
+- Updated Wiki Home, Design, Results, and Week 12 log for shared staff deployment,
+  trial results, cleanup and review reuse. Historical notes retained as history.
+- Whitespace checked; no new runtime tests or milestone closure claimed.
+
+## 2026-11-15: Isolation Evidence and Shared Staff Deployment
+
+- Owner reported A/B review changes do not affect each other after following
+  the test. Recorded this as cross-document isolation evidence, not independent
+  account authorization or same-document concurrency validation.
+- Owner clarified one canonical script/control spreadsheet for student IT staff
+  serving the instructor's class. Updated baseline and paper for sequential
+  reuse, one active operator, and explicit handoff/reset checks. No runtime
+  changes or issue closures. Remote tracking still needs this scope reconciliation.
+
+## 2026-11-15: Successful-Trial Cleanup Confirmation
+
+- Owner confirmed only generated test Forms and roster were removed; all other
+  resources remained intact. Recorded successful-run cleanup in observations,
+  paper results, and M2 acceptance review, without claiming live failure or
+  cancellation coverage. Documentation-only; whitespace checked. No closure.
+
+## 2026-11-15: M2 Closeout Pass
+
+- Read five open GitHub M2 issues and Wiki logs. Synchronized organization access
+  policy in issues #8/#9 and published Wiki Design/Log (ab208ec). No closures.
+- Added GitHub Actions workflow for six mock suites on Node 22. All 239 assertions
+  passed in injected V8; initial synchronous harness could not parse batch await,
+  then batch/sidebar/trial ran successfully with an async harness. Native Node
+  and hosted CI not run. Repository and Wiki whitespace checks passed.
+- Week 3 history, live cleanup, and independent-copy authorization/state results
+  need owner evidence. Week 4 final review, design acceptance, finishing commits,
+  and CI execution remain. Existing uncommitted task work preserved.
+
+## 2026-11-15: Organization-Controlled Template Policy
+
+- Owner clarified that the organization, not instructors, controls standard
+  Form settings. Replaced the mandatory-sign-in baseline in requirements,
+  architecture, paper, and trial instructions; preserve required name/email
+  questions as self-reported identification, without authentication claims.
+- Recorded owner-confirmed signed-out submissions without sign-in and external
+  personal-account submissions. Updated M2 inventory; cleanup/settings checks
+  remain. GitHub/Wiki policy wording has not been synchronized in this revision.
+- Documentation only; whitespace checked. No runtime changes, new Google tests,
+  PDF compilation, commits, or issue closures claimed.
+
+## 2026-11-15: Trial Results and M2 Acceptance Review
+
+- Recorded owner confirmation that latest template diagnostics all PASS and the
+  core two-student trial succeeded. Preserved the unexplained historical failure
+  and unverified audience, full-settings, cleanup, and run-metadata limitations.
+- Updated trial docs, paper results, and milestone checkpoint. Read current
+  GitHub issues #8, #9, #10, #23, #24 and added docs/m2-acceptance.md with remaining
+  criteria. No issues closed, dates changed, or remote Wiki updates made.
+- Documentation-only update; whitespace checked. No new runtime or PDF build
+  claimed. Owner review of this acceptance inventory remains pending.
+
+## 2026-11-15: Field-Level Template Diagnostics
+
+- Added eight named template comparisons with changed scalar values, REVIEW for
+  timestamp differences, FAIL for other differences, and ERROR on read failure.
+  Existing saved baselines and historical report rows are preserved.
+- Recorded owner-reported copy and staged 1/0 to 1/1 response-isolation results
+  in trial notes and paper. Template discrepancy is still unresolved; no closure.
+- All 72 mocked assertions passed via injected V8, including baseline retention,
+  changed fields, severity precedence, and access errors. Live diagnostic refresh
+  and human acceptance pending; no native Node or PDF build claimed.
+
+## 2026-11-13: Unlinked Form Destination Fix
+
+- Owner's live trial stopped with "The form currently has no response destination."
+- Added a narrow handler for that Apps Script exception in template snapshots,
+  copy setup, and verification. Other errors still propagate; no linked response
+  spreadsheet is required. Main application code is unchanged.
+- Corrected the mock to throw for unlinked Forms and added unlinked-template
+  and permission-error regression coverage. All 52 assertions passed in injected
+  V8 (native Node unavailable). Live retest and human acceptance remain pending.
+
+## 2026-11-13: M2 Two-Student Google Integration Trial (Issue #9)
+
+- Owner requested a small feasibility experiment before full generation.
+- Created task/9-google-integration-trial from the current checkpoint; added an
+  isolated Sheets-bound sandbox with two fictional Form copies, a separate roster,
+  timestamped report, original-template checks, rerun guard, and tracked cleanup.
+- Main application code/scopes are unchanged. Trial copies remain closed;
+  publication/audience settings and intended-respondent submissions are manual.
+- Added setup, live acceptance procedure, pending observation template, and
+  paper evaluation/status notes. No remote resources created by Codex.
+- Verification: 48 mocked assertions passed via injected V8; a suffix-only name
+  edge case initially failed and was corrected. Whitespace check passed.
+  Native Node, Google menu/auth execution, and PDF compilation not performed.
+- Human acceptance and live trial results pending; no issue/milestone closed.
+
 ## 2026-11-09: Pre-Form-Creation Checkpoint
 
 - Owner requested reconciliation and a checkpoint before Form copying.
