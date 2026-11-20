@@ -1,55 +1,47 @@
-# M2 Acceptance Review
+# M2 Acceptance Record
 
-Reviewed November 15, 2026 against the live GitHub issue bodies. All five issues
-remain open. Subsequent owner clarification on November 15 replaces mandatory
-sign-in with the organization's standard template policy. Signed-out and external
-personal-account submissions are owner-confirmed passes under that policy.
-GitHub issues #8/#9 and Wiki Design/Log were synchronized during the closeout
-pass (Wiki commit ab208ec). No issue or milestone was closed.
+M2 and all five issues closed November 15, 2026 with owner acceptance.
+Source e93ae29 was merged through PR #44 as b72df3d. Hosted CI was accepted
+with a billing exception at closure; that exception was resolved November 20.
+Final delivery remains December 7, 2026.
 
-| Issue | Evidence available | Remaining action |
-| --- | --- | --- |
-| [#8 Design](https://github.com/Michael-Kowata/ITC-492/issues/8) | architecture.md describes guided flow, row IDs, review approval, state and independent copies | Review design against current prototype, reconcile stale status notes, record owner acceptance and finishing commit |
-| [#9 Technology trials](https://github.com/Michael-Kowata/ITC-492/issues/9) | OCR/sidebar/review evidence; two-student copy trial, passing template checks, signed-out and external-account submissions; successful-trial cleanup owner-confirmed | Reconcile upload/execution limits and failure/cancellation cleanup evidence; complete sanitized run metadata and finishing commit |
-| [#10 Setup/checks](https://github.com/Michael-Kowata/ITC-492/issues/10) | Maintainer setup instructions and local mocked tests | Add/run CI; validate first-use authorization and isolated state in two clean control-sheet copies; record results and finishing commit |
-| [#23 Week 3 log](https://github.com/Michael-Kowata/ITC-492/issues/23) | Historical reporting period September 7-13 | Review actual Wiki entry, document only work supported for that period, checks/blockers/next steps and finishing commit |
-| [#24 Week 4 log](https://github.com/Michael-Kowata/ITC-492/issues/24) | Historical reporting period September 14-20 | Review actual Wiki entry and repository-setup evidence, checks/blockers/next steps and finishing commit |
+## Closed Issues
 
-## Suggested Order
+- #8: workflow design and single shared staff-operated control spreadsheet accepted.
+- #9: core OCR/Google feasibility accepted, including owner-tested copying,
+  access, isolated responses, template checks, and successful-trial cleanup.
+- #10: setup, review reuse and A/B isolation accepted; hosted CI now verified.
+- #23: no work logged September 7-13, owner-confirmed; Wiki commit e86b202.
+- #24: September 14-20 repository evidence reviewed; Wiki commit ba0537b.
 
-Deployment clarification: the owner intends one canonical control spreadsheet
-operated by student IT staff, not independent instructor deployments. The owner
-completed the A/B edit/approval/cancellation isolation test successfully; this
-does not validate authorization by another account or same-document concurrency.
-Revise #8/#10 scope explicitly to sequential reuse and staff handoff before closure.
-Session reset must invalidate prior approval without deleting previous outputs.
-The owner subsequently confirmed only one operator accesses the instance and
-canceling/finishing reviews does not carry state into the next review. Record
-review reuse as owner-tested; production-output preservation is not established
-by that test. Wiki deployment/results were synchronized November 15; GitHub
-issue #8/#10 deployment wording still needs reconciliation.
+Acceptance was recorded in Wiki commit d18874d; CI resolution in ff93097.
+See [Wiki Results](https://github.com/Michael-Kowata/ITC-492/wiki/Results).
 
-1. Reconcile remaining failure/cancellation and other evidence checks for #9.
-   Successful-trial cleanup and access tests are owner-confirmed; access policy
-   is synchronized on GitHub. Do not record private emails or responder links.
-2. Review and accept the current design for #8. Full production generation and
-   recovery belong to M4/M5, not this feasibility trial.
-3. Finish reproducible setup/CI and reconcile #10 with the shared staff deployment;
-   document authorization and session-reset/handoff checks, retaining A/B evidence.
-4. Reconcile the two historical Wiki logs without backdating current work.
-5. Link reviewed finishing commits and close only issues whose criteria are met;
-   close M2 after all assigned requirements are reconciled.
+## CI Resolution: November 20
 
-The core trial's results are in
-[integration observations](../sandbox/google-forms-integration/observations.md).
+Billing initially prevented jobs from starting, not an observed test failure.
+These runs now report success:
+
+- [Checkpoint push](https://github.com/Michael-Kowata/ITC-492/actions/runs/43771430365), e93ae29.
+- [Pull request](https://github.com/Michael-Kowata/ITC-492/actions/runs/43771457473), e93ae29.
+- [Merged main](https://github.com/Michael-Kowata/ITC-492/actions/runs/43773008874), b72df3d, rerun after billing resolution.
+
+The workflow runs six JavaScript mock suites on Node 22 and checks whitespace.
+Earlier local injected-V8 checks passed 239 assertions. Hosted success is separate
+evidence; neither environment tests live Google services or browser usability.
+Local native Node availability is not implied by hosted CI.
+
+## Evidence Limits
+
+The organization controls template settings. Required name/email answers provide
+self-reported identification, not authenticated identity. Owner tests confirmed
+signed-out and external-account access, A/B isolation, and no carryover between
+reviews. One operator uses the canonical control spreadsheet at a time.
+
+See [trial observations](../sandbox/google-forms-integration/observations.md).
 Latest template checks PASS; the earlier aggregate failure has no established
-cause. Successful-trial cleanup has separate owner confirmation; failure/cancellation
-cleanup and detailed quiz-setting checks are not implied by either pass.
-Wiki contents and CI run history were not independently audited in this review;
-The closeout pass added .github/workflows/checks.yml for all six mock suites on
-push, pull request, and manual dispatch. All 239 assertions passed locally via
-injected V8; native Node is unavailable and hosted CI has not run for this change.
-Week 3 remains an unsupported placeholder: owner history is needed. Week 4 has
-an existing entry and September repository commits, but needs its final linked
-review. No historical work was invented. Dates remain planning targets,
-with final delivery December 7, 2026.
+cause. Acceptance does not establish live failure/cancellation cleanup, complete
+quiz-setting fidelity, measured execution limits, production recovery/output
+preservation, or another operator's first-use authorization. Production generation,
+recovery and broader evaluation remain later work. Historical log dates are
+preserved, not rewritten to imply November work happened in September.

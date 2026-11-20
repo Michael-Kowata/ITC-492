@@ -22,7 +22,7 @@ attention; any scope or date changes must be recorded explicitly.
 | ID | Milestone | Start | Current End / Due | Status |
 | --- | --- | --- | --- | --- |
 | M1 | Scope and project foundation | 2026-09-14 | 2026-10-28 | Completed; actual end |
-| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | Core integration trial successful; remaining criteria under review November 15 |
+| M2 | Design and technology trials | 2026-10-29 | 2026-11-04 | Closed November 15; hosted CI verified November 20 |
 | M3 | Screenshot extraction and review | 2026-11-05 | 2026-11-11 | Initial OCR path implemented; review pending |
 | M4 | Sheet and individual form creation | 2026-11-12 | 2026-11-18 | Planned |
 | M5 | Link matching and recovery | 2026-11-19 | 2026-11-25 | Planned |
@@ -36,6 +36,13 @@ upload and staging-tab approval. M4-M5 create output forms and correct links
 with recovery. M6 evaluates behavior, and M7 completes the paper and release.
 
 ## Change History
+
+November 20 follow-up: billing resolved; checkpoint push/PR and merged-main CI
+now pass. M2 closed November 15 with owner acceptance and a hosted CI exception
+at that time. The exception is now resolved, not retroactively treated as passing
+at closure. All five M2 issues are closed. See [acceptance record](m2-acceptance.md)
+for run links and limitations. November 4 remains the historical due date;
+actual closure was November 15. No other due dates changed.
 
 November 15 checkpoint: owner confirmed two-student copy creation, names,
 destination, responses isolated at 1/0 then 1/1, and latest template diagnostics
@@ -92,4 +99,4 @@ final presentation dates must be confirmed independently of development targets.
 [GitHub Milestones](https://github.com/Michael-Kowata/ITC-492/milestones) hold
 current dates and issue status. Milestone branches are created or updated from
 main before work begins and deleted after completion. M1 is closed and its
-branch has been removed. M2 is the current incomplete development milestone.
+branch has been removed. M2 is closed; M3 acceptance review is next.

@@ -1,5 +1,14 @@
 # Agent Log
 
+## 2026-11-20: CI Resolution in Repository Documentation
+
+- Updated paper results, M2 acceptance record and milestone status for November
+  15 closure and November 20 verified passing push/PR/merged-main CI runs.
+  Preserved the billing exception as history and linked evidence.
+- Distinguished mocked checks from live Google trials; retained evidence limits.
+  Wiki and issue #10 already updated separately. Documentation only; whitespace
+  checked and hyperref availability inspected. No new runtime or PDF build claimed.
+
 ## 2026-11-15: Review Reuse and Wiki Synchronization
 
 - Owner confirmed single-operator access and no review carryover after canceling

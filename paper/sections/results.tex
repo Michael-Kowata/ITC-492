@@ -84,6 +84,20 @@ The owner subsequently confirmed that canceling or finishing a review does not
 carry state into the next review. This supports review reuse, not validation of
 production-output preservation or simultaneous-user behavior.
 
+\subsection{Continuous Integration and M2 Acceptance}
+M2 closed November 15, 2026 with owner acceptance and an explicit exception for
+hosted continuous integration (CI), blocked before execution by account billing.
+On November 20, billing was resolved and successful runs were verified for the
+\href{https://github.com/Michael-Kowata/ITC-492/actions/runs/43771430365}{checkpoint push},
+\href{https://github.com/Michael-Kowata/ITC-492/actions/runs/43771457473}{pull request}, and
+\href{https://github.com/Michael-Kowata/ITC-492/actions/runs/43773008874}{merged-main rerun}.
+The exception is now resolved; the original timing remains historical evidence.
+The workflow runs six JavaScript mock suites on Node 22 and checks whitespace.
+Earlier local injected-runtime checks passed 239 assertions. Automated checks
+do not exercise live Google services or establish browser usability; those are
+separate from owner-reported trials. M2 acceptance does not imply completion
+of production generation or recovery.
+
 \subsection{Presentation Feedback}
 The proposal presentation was scheduled for September 28, 2026. On October 28,
 the project owner reported that it went successfully. The reported feedback was
