@@ -36,6 +36,37 @@ in the weekly wiki log. Update each milestone branch from `main` before starting
 its work so it includes earlier completed milestones. Branches organize code;
 GitHub milestones group issues and due dates separately.
 
+## Living Pull Request Record
+
+Maintain the PR's Change, Verification, and Documentation sections alongside
+the issue, paper, Wiki, and agent log. Open a draft PR when an issue's branch is
+ready to publish; use its milestone branch as the base. If no PR exists yet,
+record evidence in the issue/agent log and transfer it when creating the PR.
+
+- After a meaningful implementation change, summarize actual changes, affected
+  behavior, and remaining scope in Change.
+- After testing or owner feedback, update Verification with commands/scenarios,
+  outcomes, tested commit, dates, and CI/evidence links. Distinguish local mocks,
+  hosted checks, owner reports, and independent live tests. Record failures and
+  limitations; do not infer a pass from a merge or a fixed environment blocker.
+- After documentation updates, link relevant paper sections, Wiki pages, fixture
+  notes, and agent-log entries in Documentation. State human acceptance status.
+- At each pushed checkpoint and before merge/closure, review all three sections
+  against the issue criteria. Replace empty placeholders with evidence, Pending,
+  or Not applicable plus a reason. Link the finishing commit only when available.
+
+Edit the existing PR body rather than relying only on scattered comments.
+Preserve reviewer/user-written notes. A changed template affects new PRs, not
+existing ones; update those explicitly through GitHub or `gh pr edit`.
+If remote access is unavailable, retain a local/issue record and report that the
+PR remains unsynchronized. Do not claim publishing succeeded without checking.
+
+Screenshots or recordings are optional supporting evidence, not mandatory for
+every change. Use fictional/sanitized inputs; never attach student records,
+credentials, or private Form/Drive links. Prefer links over duplicating long
+paper passages. Historical PR backfills must be labeled retrospective and must
+not imply checks were performed before merge when they occurred afterward.
+
 ## Wiki Updates
 
 Edit Home, Log, Design, Results, Reading, and Appendix directly in the

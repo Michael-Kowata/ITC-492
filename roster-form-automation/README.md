@@ -21,6 +21,10 @@ for limitations; other smoke checks are not implied by these results.
 
 ## Maintainer Setup
 
+November 25 review acceptance: the owner confirmed 17 included students
+(2 in-person, 15 online), a warning-only manual duplicate, and keyboard-only
+operation. See [review evidence and limitations](../docs/roster-review-acceptance.md).
+
 1. Create an empty test Google Sheet, then open Extensions > Apps Script.
 2. Replace `Code.gs` with `src/Code.gs` and add an HTML file named `Sidebar`
    containing `src/Sidebar.html`.

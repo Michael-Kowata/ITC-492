@@ -1,5 +1,25 @@
 # Agent Log
 
+## 2026-11-25: Roster Review Acceptance Evidence (#12)
+
+- Recorded owner-confirmed correction/exclusion totals, warning-only duplicate
+  name, and Tab/no-mouse operation in review notes, README, and paper results.
+- No hidden-ID inspection or comprehensive accessibility audit inferred. Prepared
+  focused acceptance PR with Change/Verification/Documentation and retained the
+  requested PR-template/workflow updates. Final closeout remains separate.
+- Documentation only; whitespace and local reference checks performed. No new
+  runtime or PDF build claimed. Remote issue/PR evidence updated after publication.
+
+## 2026-11-25: Living PR Evidence Workflow
+
+- Owner requested ongoing PR Change/Verification/Documentation updates alongside
+  repository documents and paper. Expanded the template and workflow with update
+  checkpoints, evidence links, actual test outcomes, and acceptance status.
+- Explicitly distinguished owner reports, mocks and hosted/live checks; included
+  privacy rules and retrospective-update labeling. Existing PR bodies are not
+  automatically changed by the template. No remote PR updates claimed here.
+- Documentation/template only; git diff --check passed. No runtime tests needed.
+
 ## 2026-11-25: Screenshot Extraction Tracking Closeout (#11)
 
 - Owner accepted the extraction checks and requested finishing-commit and
