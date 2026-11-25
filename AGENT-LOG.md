@@ -1,5 +1,16 @@
 # Agent Log
 
+## 2026-11-25: Screenshot Extraction Tracking Closeout (#11)
+
+- Owner accepted the extraction checks and requested finishing-commit and
+  milestone integration tracking. Published evidence e286916 is merged into
+  main via PR #46 (1c51712). This record adds the required Fixes reference.
+- Evidence: privacy-reviewed AI-edited Zoom fixture and expected transcription,
+  recorded OCR comparison, and owner-confirmed JPEG and invalid-image handling.
+  The capture is not wholly synthetic; provenance and evidence limits remain.
+- Checked remote commit/branch history and documentation whitespace. No new
+  runtime test, hosted CI result, or PDF build claimed for this tracking change.
+
 ## 2026-11-25: Commit Screenshot Extraction Evidence (#11)
 
 - Added owner-reported JPEG and invalid-image results to the paper and application
