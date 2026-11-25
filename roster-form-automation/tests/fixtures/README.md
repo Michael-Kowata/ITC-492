@@ -31,10 +31,31 @@ no text or EXIF chunks were found. The replacement is available for versioning;
 the original `Video conference attendance list.png` remains ignored as a safeguard.
 No image modification was performed by Codex.
 
-The small text size is an OCR test condition, not evidence of extraction accuracy.
-Record results at this native resolution before considering preprocessing.
-No OCR has been run. A higher-resolution privacy-preserving capture may be useful
-for comparison if recognition is poor.
+The small text size is an OCR test condition, not evidence of general extraction
+accuracy. The owner supplied live OCR output on November 8, 2026. The
+[recorded comparison](../../../sandbox/google-cloud-vision/observations/README.md)
+found 18/19 exact reference-row matches, with `Quinn Harmon - IP` split into
+`Quinn Harmon - I` and a separate `IP` line. Manual review is required.
+Exact input identity and deployed revision were not independently verified;
+this one sample does not establish accuracy on other screenshots.
+
+## Upload Acceptance Checks: November 25, 2026
+
+For [issue #11](https://github.com/Michael-Kowata/ITC-492/issues/11), the owner
+reported these live checks:
+
+| Input | Reported outcome |
+| --- | --- |
+| Valid JPEG | Successfully processed |
+| Oversized image | Gracefully rejected with an explanation |
+| Corrupted image | Gracefully rejected with an explanation |
+| Image containing no text | Gracefully rejected with an explanation |
+
+These are owner-reported passes, not independent reruns or newly committed
+fixtures. Exact files, sizes, error wording, execution times, and deployed
+revision were not supplied. The JPEG check establishes format support, not
+an additional measured OCR accuracy result. No claim is made that these checks
+independently verified unchanged roster state or service-side data retention.
 
 Keep real screenshots and their expected names under the root ignored `data/`
 directory, for example `data/ocr/private-case-01/`. Never commit student names,
@@ -45,4 +66,5 @@ Technology-specific trial instructions and sanitized observations go in
 `sandbox/<technology>/README.md`; reference fixtures rather than duplicating them.
 Selection previews the file locally. Choosing Extract text sends it through
 Apps Script to Cloud Vision; the current inline OCR path does not save an image
-to Drive. Live recognition and data-handling validation remain pending.
+to Drive. Live recognition is supported by the owner evidence above; independent
+data-handling validation and service-retention verification are not established.

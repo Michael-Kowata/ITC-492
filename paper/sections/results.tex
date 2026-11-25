@@ -4,8 +4,8 @@ The repository contains a defined scope, acceptance criteria, GitHub issue and
 milestone tracking, published Wiki pages, experiment templates, an agent log,
 and presentation artifacts. These demonstrate project preparation, not the
 correctness of the proposed automation. One owner-supplied OCR text sample has
-been compared with the reference; runtime, successful form-generation counts,
-and recovery results remain unmeasured.
+been compared with the reference; runtime and production recovery remain
+unmeasured. Separate two-student Form-copy trial results are reported below.
 
 On November 8, 2026, the owner reported that the sidebar setup worked and that
 valid links were accepted while invalid links were rejected. This is a limited
@@ -13,8 +13,8 @@ owner-reported smoke check, not a complete usability or permission test.
 A privacy-reviewed, avatar-free fixture and manual reference are available:
 19 display rows and 17 expected students after staff exclusion, including two
 in-person students. These counts describe test preparation, not successful
-automated extraction. The next experiment compares raw OCR with the reference
-before testing roster filtering and attendance ordering.
+automated extraction. The completed raw OCR comparison and subsequent
+owner-reported review checks are described below.
 
 \subsection{Initial OCR Smoke Test}
 On November 8, 2026, the owner reported that the integrated OCR output worked
@@ -33,6 +33,14 @@ Manual correction must reconstruct the suffix and remove the extra fragment;
 blind concatenation would leave a duplicated letter. This motivates explicit
 review before attendance classification or Form generation. No successful
 filtering or Form generation is inferred.
+
+\subsection{Screenshot Input Checks}
+On November 25, 2026, the owner confirmed successful JPEG processing and
+graceful failures with explanations for oversized, corrupted, and text-free
+images. These are owner-reported passes supporting input handling, not
+independent reruns or a new OCR accuracy measurement. Exact test files, sizes,
+error wording, timings, and deployed revision were not supplied. These checks
+do not independently establish unchanged roster state or service-side retention.
 
 \subsection{Review and Batch Progress}
 The owner reported successful editable review/approval, the compact sidebar,

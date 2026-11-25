@@ -1,5 +1,24 @@
 # Agent Log
 
+## 2026-11-25: Commit Screenshot Extraction Evidence (#11)
+
+- Added owner-reported JPEG and invalid-image results to the paper and application
+  README; replaced obsolete future-OCR claims and distinguished production work
+  from the two-student sandbox. Included fixture and OCR-trial updates.
+- Documentation only. Whitespace and referenced local links checked; no runtime
+  tests or PDF build rerun. Results are owner reports, not independent retests.
+- Committed as verification evidence for #11; issue closure and push are separate.
+
+## 2026-11-25: Screenshot Fixture Documentation Reconciliation (#11)
+
+- Replaced stale claims that OCR had not run with linked November 8 owner output
+  and its 18/19 reference-row comparison. Preserved fixture provenance and limits.
+- Recorded owner-confirmed JPEG success and explained oversized/corrupt/no-text
+  failures; no exact files, sizes, deployment revision, or independent reruns
+  claimed. Linked the follow-up from the OCR trial document.
+- Documentation only: whitespace and relative documentation links checked.
+  No runtime tests, commits, or issue closure performed in this update.
+
 ## 2026-11-20: CI Resolution in Repository Documentation
 
 - Updated paper results, M2 acceptance record and milestone status for November

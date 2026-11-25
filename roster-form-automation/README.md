@@ -12,9 +12,12 @@ verification, output roster generation, and Form copying remain unimplemented.
 Editable staging-sheet review and approval were owner-tested successfully.
 The owner also confirmed compact review and three-image batches work. Only the
 latest exact-overlap skipping change awaits live confirmation; broader failure
-and independent-copy checks remain pending.
-The owner reported successful setup and valid/invalid link
-checks; the remaining smoke checks are not yet individually confirmed.
+checks remain pending. A/B review isolation and sequential review reuse were
+owner-tested; these do not establish concurrent-user safety.
+The owner reported successful setup and valid/invalid link checks. On November
+25, the owner confirmed JPEG processing and explained failures for oversized,
+corrupted, and text-free images. See the [fixture evidence](tests/fixtures/README.md)
+for limitations; other smoke checks are not implied by these results.
 
 ## Maintainer Setup
 
@@ -171,7 +174,9 @@ staging tab. Upload a PNG or JPEG directly from the computer; no manual Drive
 upload is required. After approval, generate a separate roster spreadsheet
 and one template-based form per student.
 
-OCR may require temporary Drive resources. M2 will select OCR, authorization
-scopes, upload limits, persistent cloud run state, and cleanup on success,
-failure, or cancellation. M3 implements upload and review. No OCR results are
-claimed and milestone dates are unchanged.
+This section describes the original planned flow, not completed production
+generation. The implemented Cloud Vision path sends image content inline and
+does not save screenshot files to Drive. OCR and editable review now have
+owner-reported evidence, including the November 25 input checks above.
+Production output generation and recovery remain later work; the separate
+two-student sandbox is feasibility evidence, not the production workflow.

@@ -9,6 +9,12 @@ records 18/19 exact display-row matches and a split attendance suffix. Timing an
 exact run metadata remain pending; this is not a general accuracy estimate.
 See [Cloud Vision trial setup](../sandbox/google-cloud-vision/README.md).
 
+November 25 M3/#11 follow-up: the owner confirmed valid JPEG processing and
+graceful, explained failures for oversized, corrupted, and text-free images.
+See [fixture acceptance notes](../roster-form-automation/tests/fixtures/README.md)
+for evidence limits. This supplements the earlier PNG/OCR result; it does not
+change its measured reference-row comparison or establish general accuracy.
+
 ## Inputs and Reference
 
 - Image: `roster-form-automation/tests/fixtures/Zoom Screenshot Sample.png`.
